@@ -2,15 +2,15 @@ const qnaList = [
   {
     q: "1. 어떤 음악을 듣고 있을 때 가장 먼저 떠오르는 감정은 무엇인가요?",
     a: [
-      { answer: "a. 노래 가사의 내용에 공감하는 감정", value: "E" },
-      { answer: "b. 멜로디와 비트에 빠져드는 감정", value: "I" },
+      { answer: "a. 노래 가사의 내용에 공감하는 감정", value: "I" },
+      { answer: "b. 멜로디와 비트에 빠져드는 감정", value: "E" },
     ],
   },
   {
     q: "2. 좋아하는 노래의 분위기는 어떤 것인가요?",
     a: [
-      { answer: 'a. 슬픈 감정이나 그리움을 담은 분위기" ', value: "N" },
-      { answer: 'b. 즐거움과 흥분을 느낄 수 있는 분위기" ', value: "S" },
+      { answer: 'a. 슬픈 감정이나 그리움을 담은 분위기" ', value: "S" },
+      { answer: 'b. 즐거움과 흥분을 느낄 수 있는 분위기" ', value: "N" },
     ],
   },
   {
@@ -25,11 +25,11 @@ const qnaList = [
     a: [
       {
         answer: "a. 민감하고 감성적인 스타일",
-        value: "P",
+        value: "J",
       },
       {
         answer: "b.활기찬 무대 퍼포먼스와 유쾌한 분위기가 있는 스타일",
-        value: "J",
+        value: "P",
       },
     ],
   },

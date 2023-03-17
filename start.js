@@ -10,7 +10,7 @@ let anserResult = '';
 function begin() {
   console.log("main", main.style.display);
   main.style.display = "none";
-  qna.style.display = "block";
+  qna.style.display = "grid";
   console.log(qIdx);
   goNext(qIdx);
 }
@@ -51,7 +51,7 @@ function addAnswer(answerText, value) {
 
 function goResult() {
   qna.style.display = "none";
-  result.style.display = "block";
+  result.style.display = "grid";
 
   const resultName = document.querySelector(".resultName");
   console.log(anserResult);
@@ -75,7 +75,7 @@ function reGame() {
   anserResult = "";
   qIdx = 0;
   result.style.display = "none";
-  main.style.display = "block";
+  main.style.display = "grid";
 }
 
 

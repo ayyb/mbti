@@ -2,12 +2,30 @@ body {
   background-color: #FFe5e5;
 }
 
+/*섹션 값 설정*/
+section {
+  display: grid;
+  place-items: center;
+  align-content: center;
+  min-height: 30vh;
+}
+
 #qna{
     display: none;
 }
 #result{
     display: none;
 }
+
+/* .answerList{
+  padding: 12px 5px;
+  margin: 10px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 13px;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #FFB103 0%, #FFB103 100%);
+} */
 
 .progress {
     max-width: 500px;
