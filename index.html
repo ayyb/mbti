@@ -4,26 +4,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>나에게 맞는 플레이 리스트는?</title>
     <link rel="stylesheet" href="./style.css">
     <script src = "./data.js" defer></script>
     <script src = "./start.js" defer></script>
 </head>
 <body>
     <section id="main">
-        <h3>title</h3>
+        <h3>나에게 맞는 플레이리스트는?</h3>
         <img src="" alt=""/>
         <p>
-            내용
+            내가 좋아하는 플레이 리스트를 찾아보자구요!
         </p>
         <button onclick="js:begin()">
-            시작
+            누르면 시작!
         </button>
     </section>
     <section id="qna">
-        <p>
-            test
-        </p>
+        <div class="progress">
+            <div class="value"></div>
+        </div>
         <div class="qBox">
 
         </div>
@@ -32,16 +32,29 @@
         </div>
     </section>
     <section id="result">
-        결과페이지
+        <h2>해당하는 MBTI는?</h2>
         <div class="resultName">
 
         </div>
         <div class="resultImg">
 
         </div>
+        <h3>내 성향은?</h3>
         <div class="resultDesc">
 
         </div>
+        <h3>나랑 어울리는 플레이리스트!</h3>
+        <div class="playList">
+            <div class="song"></div>
+            <div class="song"></div>
+            <div class="song"></div>
+        </div>
+        <button onclick="js:reGame()">
+            다시하기
+        </button>
+        <button class="share-or-copy">
+            공유하기
+        </button>
     </section>
 </body>
 </html>
