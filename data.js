@@ -1,4 +1,4 @@
-export const qnaList = [
+const qnaList = [
   {
     q: "1. 어떤 음악을 듣고 있을 때 가장 먼저 떠오르는 감정은 무엇인가요?",
     a: [
