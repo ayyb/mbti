@@ -3,7 +3,7 @@ const main = document.querySelector("#main");
 const result = document.querySelector("#result");
 const songs = document.querySelectorAll('.song')
 const progressValueEl = document.querySelector('.progress .value')
-const endPoint = 8;
+const endPoint = 12; //문제 갯수
 
 let qIdx = 0;
 let anserResult = '';
