@@ -1,0 +1,63 @@
+body {
+    width: 100%;
+    font-family: 'godoMaum';
+    font-weight: normal;
+  }
+  
+  button{
+    font-family: 'godoMaum';
+    font-weight: normal;
+  }
+  .container{
+    width:100%;
+    max-width: 1280px;
+    background: #FCF2F1;
+    margin:0 auto;
+  }
+  /*섹션 값 설정*/
+  
+  section {
+    display: grid;
+    place-items: center;
+    align-content: center;
+    min-height: 100vh;
+  
+  }
+  
+  /* sectio main */
+  #main h1{
+    font-size: 8vw;
+  }
+  #qna{
+      display: none;
+  }
+  #result{
+      display: none;
+  }
+  
+  /* .answerList{
+    padding: 12px 5px;
+    margin: 10px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 13px;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #FFB103 0%, #FFB103 100%);
+  } */
+  
+  .progress {
+      max-width: 500px;
+      height: 20px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 60px;
+      border-radius: 10px;
+      background-color: #FFFFFF;
+    }
+    .progress .value {
+      width: 10%;
+      height: 20px;
+      background-color: #FFB103;
+      border-radius: 10px;
+      transition: 0.2s;
+    }

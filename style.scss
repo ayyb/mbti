@@ -1,0 +1,245 @@
+$bg-color: #FCF2F1;
+$btn-color: #000;
+$font-color:#fff;
+$point-color: #FEA8A7;
+
+@mixin center{
+    display: grid;
+    place-items: center;
+    align-content: center;
+}
+@mixin btn-style{
+    //시작하기 다시하기 공유하기
+    font-size: 2.031vw;
+    cursor:pointer;
+    padding: 0.5vw 7vw;
+    border-radius: 40px;
+    box-sizing: border-box;
+    background: $btn-color;
+    color:$font-color;
+    &:hover, &:focus, &:active{
+        background: $point-color;
+        color:$btn-color;
+        transition: all 0.1s ease;
+        box-shadow: 3px 3px 3px rgba(0,0,0,0.3);
+    }
+}
+@mixin answer-style{
+    font-size: 1.75vw;
+    cursor:pointer;
+    padding: 2vw 5vw;
+    box-sizing: border-box;
+    border-radius: 20px;
+    background: $btn-color;
+    color:$font-color;
+    &:hover, &:focus, &:active{
+        background: $point-color;
+        color:$btn-color;
+        transition: all 0.1s ease;
+        box-shadow: 3px 3px 3px rgba(0,0,0,0.3);
+    }
+}
+
+/*기본 layout*/
+body{
+    width: 100%;
+    font-family: 'godoMaum';
+    font-weight: normal;
+    background: #fff;
+    button{
+        border:none;
+        font-family: 'godoMaum';
+        font-weight: normal;
+    }
+}
+
+.container{
+    width:100%;
+    max-width: 1920px;
+    background: $bg-color;
+    margin:0 auto;
+    @include center;
+    section{
+        width:100%;
+        padding: 3vw;
+        box-sizing: border-box;
+        // background: tomato; 
+        //@include center;
+        min-height: 100vh;
+        .inner{
+            // background: blue;
+            margin:0 auto;
+            box-sizing: border-box;
+            // border:1px solid $point-color;
+            width: 92%;
+            @include center;
+        }
+    }
+}
+
+/*main*/
+#main{
+    h1{
+        margin-top: 10vw;
+        font-size: 3.516vw;
+    }
+    img{
+        width:30%;
+    }
+    p{
+        font-size: 2.031vw;
+        margin-bottom: 2.5vw;
+        text-align: center
+    }
+    .start{
+        @include btn-style;
+    }
+}
+
+
+/*qna*/
+#qna{
+    display:none;
+    .progress-bar{
+        position:relative;
+        padding:1vw;
+        box-sizing: border-box;
+        .txt-box{
+            margin-bottom: 2vw;
+            .title{
+                font-size: 1.25vw;
+                float:left;
+            }
+            .count{
+                font-size: 1.25vw;
+                float:right;
+            }
+        }
+        .progress{
+            border-radius: 20px;
+            position:relative;
+            background: #fff;
+            width:30vw;
+            height: 20px;
+            .value{
+                border-radius: 20px;
+                position:absolute;
+                background: $point-color;
+                width:0;
+                height:20px;
+                top:0;
+                left:0;
+                transition: all 0.7s ease;
+
+            }
+
+        }
+    }
+    .qBox{
+        font-size: 2.5vw;
+        padding:1vw 2vw;
+        box-sizing: border-box;
+        margin-bottom: 2vw;
+    }
+    img{
+        width:18%;
+        margin-bottom: 2.75vw;
+    }
+    .answerBox{
+        display:flex;
+        flex-direction: column;
+        .answerList{
+            @include answer-style;
+            &:nth-child(2n-1){
+                margin-bottom: 1.5vw;
+            }
+        }
+    }
+}
+
+
+/*result*/
+#result{
+    display: none;
+    .inner{
+        button{
+            @include btn-style;
+        }
+    }
+}
+
+
+/*responsive*/
+/*mobile*/
+@media screen and (max-width: 500px) {
+    #main{
+        h1{
+            font-size: 9vw;
+        }
+        img{
+            width:70%;
+        }
+        p{
+            font-size: 5vw;
+            margin-bottom: 4.5vw;
+        }
+        .start{
+            @include btn-style;
+            font-size: 6vw;
+        }
+    }
+
+    #qna{
+        display:none;
+        .progress-bar{
+            margin-bottom: 3vw;
+            .txt-box{
+                margin-bottom: 4vw;
+                .title{
+                    font-size: 3.25vw;
+                }
+                .count{
+                    font-size: 3.25vw;
+                }
+            }
+            .progress{
+                width: 70vw;
+                max-width:400px;
+                height: 4vw;
+                .value{
+                    height: 4vw;
+                }
+    
+            }
+        }
+        .qBox{
+            font-size: 7vw;
+            padding:1vw 2vw;
+            box-sizing: border-box;
+            margin-bottom: 3.5vw;
+        }
+        img{
+            width:60%;
+            margin-bottom: 9vw;
+        }
+        .answerBox{
+            .answerList{
+                font-size: 5vw;
+                padding: 3vw 7vw;
+                &:nth-child(2n-1){
+                    margin-bottom: 3vw;
+                }
+            }
+        }
+    }
+
+    /*result*/
+    #result{
+        display: none;
+        .inner{
+            button{
+                font-size: 6vw;
+            }
+        }
+    }
+}
