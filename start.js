@@ -3,6 +3,7 @@ const main = document.querySelector("#main");
 const result = document.querySelector("#result");
 const songs = document.querySelectorAll('.song');
 const progressValueEl = document.querySelector('.progress .value');
+const countNumber = document.querySelector('.num');
 const endPoint = 12; //문제 갯수
 
 let qIdx = 0;
@@ -21,6 +22,7 @@ function goNext(qIdx) {
     return;
   }
   const q = document.querySelector(".qBox");
+  countNumber.innerHTML = qIdx + 1 +' / 12';
   q.innerHTML = qnaList[qIdx].q;
   for (let i in qnaList[qIdx].a) {
     addAnswer(qnaList[qIdx].a[i].answer, qnaList[qIdx].a[i].value);
