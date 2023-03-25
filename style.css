@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 body {
   background-color: #FFe5e5;
 }
@@ -43,3 +44,239 @@ section {
     border-radius: 10px;
     transition: 0.2s;
   }
+=======
+@charset "UTF-8";
+/*기본 layout*/
+body {
+  width: 100%;
+  font-family: "godoMaum";
+  font-weight: normal;
+  background: #fff;
+}
+body button {
+  border: none;
+  font-family: "godoMaum";
+  font-weight: normal;
+}
+
+.container {
+  width: 100%;
+  max-width: 1920px;
+  background: #FCF2F1;
+  margin: 0 auto;
+  display: grid;
+  place-items: center;
+  align-content: center;
+}
+.container section {
+  width: 100%;
+  padding: 3vw;
+  box-sizing: border-box;
+  min-height: 100vh;
+}
+.container section .inner {
+  margin: 0 auto;
+  box-sizing: border-box;
+  width: 92%;
+  display: grid;
+  place-items: center;
+  align-content: center;
+}
+
+/*main*/
+#main h1 {
+  margin-top: 10vw;
+  font-size: 3.516vw;
+}
+#main img {
+  width: 30%;
+}
+#main p {
+  font-size: 2.031vw;
+  margin-bottom: 2.5vw;
+  text-align: center;
+}
+#main .start {
+  font-size: 2.031vw;
+  cursor: pointer;
+  padding: 0.5vw 7vw;
+  border-radius: 40px;
+  box-sizing: border-box;
+  background: #000;
+  color: #fff;
+}
+#main .start:hover, #main .start:focus, #main .start:active {
+  background: #FEA8A7;
+  color: #000;
+  transition: all 0.1s ease;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+}
+
+/*qna*/
+#qna {
+  display: none;
+}
+#qna .progress-bar {
+  position: relative;
+  padding: 1vw;
+  box-sizing: border-box;
+}
+#qna .progress-bar .txt-box {
+  margin-bottom: 2vw;
+}
+#qna .progress-bar .txt-box .title {
+  font-size: 1.25vw;
+  float: left;
+}
+#qna .progress-bar .txt-box .count {
+  font-size: 1.25vw;
+  float: right;
+}
+#qna .progress-bar .progress {
+  border-radius: 20px;
+  position: relative;
+  background: #fff;
+  width: 30vw;
+  height: 20px;
+}
+#qna .progress-bar .progress .value {
+  border-radius: 20px;
+  position: absolute;
+  background: #FEA8A7;
+  width: 0;
+  height: 20px;
+  top: 0;
+  left: 0;
+  transition: all 0.7s ease;
+}
+#qna .qBox {
+  font-size: 2.5vw;
+  padding: 1vw 2vw;
+  box-sizing: border-box;
+  margin-bottom: 2vw;
+}
+#qna img {
+  width: 18%;
+  margin-bottom: 2.75vw;
+}
+#qna .answerBox {
+  display: flex;
+  flex-direction: column;
+}
+#qna .answerBox .answerList {
+  font-size: 1.75vw;
+  cursor: pointer;
+  padding: 2vw 5vw;
+  box-sizing: border-box;
+  border-radius: 20px;
+  background: #000;
+  color: #fff;
+}
+#qna .answerBox .answerList:hover, #qna .answerBox .answerList:focus, #qna .answerBox .answerList:active {
+  background: #FEA8A7;
+  color: #000;
+  transition: all 0.1s ease;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+}
+#qna .answerBox .answerList:nth-child(2n-1) {
+  margin-bottom: 1.5vw;
+}
+
+/*result*/
+#result {
+  display: none;
+}
+#result .inner button {
+  font-size: 2.031vw;
+  cursor: pointer;
+  padding: 0.5vw 7vw;
+  border-radius: 40px;
+  box-sizing: border-box;
+  background: #000;
+  color: #fff;
+}
+#result .inner button:hover, #result .inner button:focus, #result .inner button:active {
+  background: #FEA8A7;
+  color: #000;
+  transition: all 0.1s ease;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+}
+
+/*responsive*/
+/*mobile*/
+@media screen and (max-width: 500px) {
+  #main h1 {
+    font-size: 9vw;
+  }
+  #main img {
+    width: 70%;
+  }
+  #main p {
+    font-size: 5vw;
+    margin-bottom: 4.5vw;
+  }
+  #main .start {
+    font-size: 2.031vw;
+    cursor: pointer;
+    padding: 0.5vw 7vw;
+    border-radius: 40px;
+    box-sizing: border-box;
+    background: #000;
+    color: #fff;
+    font-size: 6vw;
+  }
+  #main .start:hover, #main .start:focus, #main .start:active {
+    background: #FEA8A7;
+    color: #000;
+    transition: all 0.1s ease;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+  }
+  #qna {
+    display: none;
+  }
+  #qna .progress-bar {
+    margin-bottom: 3vw;
+  }
+  #qna .progress-bar .txt-box {
+    margin-bottom: 4vw;
+  }
+  #qna .progress-bar .txt-box .title {
+    font-size: 3.25vw;
+  }
+  #qna .progress-bar .txt-box .count {
+    font-size: 3.25vw;
+  }
+  #qna .progress-bar .progress {
+    width: 70vw;
+    max-width: 400px;
+    height: 4vw;
+  }
+  #qna .progress-bar .progress .value {
+    height: 4vw;
+  }
+  #qna .qBox {
+    font-size: 7vw;
+    padding: 1vw 2vw;
+    box-sizing: border-box;
+    margin-bottom: 3.5vw;
+  }
+  #qna img {
+    width: 60%;
+    margin-bottom: 9vw;
+  }
+  #qna .answerBox .answerList {
+    font-size: 5vw;
+    padding: 3vw 7vw;
+  }
+  #qna .answerBox .answerList:nth-child(2n-1) {
+    margin-bottom: 3vw;
+  }
+  /*result*/
+  #result {
+    display: none;
+  }
+  #result .inner button {
+    font-size: 6vw;
+  }
+}/*# sourceMappingURL=style.css.map */
+>>>>>>> 591534797194e3e8ad5a5ecb16b1b22289986ff9

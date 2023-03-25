@@ -5,56 +5,84 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>나에게 맞는 플레이 리스트는?</title>
+    <link rel="stylesheet" href="./reset.css">
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./font.css">
+    <!-- js -->
     <script src = "./data.js" defer></script>
     <script src = "./start.js" defer></script>
+
 </head>
 <body>
-    <section id="main">
-        <h1>나에게 맞는 플레이리스트는?</h1>
-        <img src="./img/music.png" alt=""/>
-        <p>
-            내가 좋아하는 플레이 리스트를 찾아보자구요!
-        </p>
-        <button class="start" onclick="js:begin()">
-            누르면 시작!
-        </button>
-    </section>
-    <section id="qna">
-        <div class="progress">
-            <div class="value"></div>
-        </div>
-        <div class="qBox">
+    <div class="container">
+        <!-- main -->
+        <section id="main" data-aos="fade-down">
+            <div class="inner">
+                <h1>나에게 맞는 플레이리스트는?</h1>
+                <img src="./img/main.png" alt="메인이미지"/>
+                <p>
+                    내 성격으로 알아보는 추천 음악 테스트!<br>
+                    내게 맞는 플레이리스트를 찾아보자!
+                </p>
+                <button class="start" onclick="js:begin()">
+                    누르면 시작!
+                </button>
+            </div>
+        </section>
+        <!-- 질문&답 -->
+        <section id="qna">
+            <div class="inner">
+                <!-- 진행상태 -->
+                <div class="progress-bar">
+                    <div class="txt-box">
+                        <p class="title">플레이리스트 MBTI</p>
+                        <p class="count"><span class="num">1</sp>/12</p>
+                    </div>
+                    <div class="progress">
+                        <div class="value"></div>
+                    </div>
+                </div>
+                <!-- 질문 -->
+                <div class="qBox">
+        
+                </div>
+                <img src="img/answer.png" alt="답변페이지 이미지">
+                <!-- 답 -->
+                <div class="answerBox">
+        
+                </div>
+            </div>
+        </section>
+        <!-- result -->
+        <section id="result">
+            <div class="inner">
+                <h2>해당하는 MBTI는?</h2>
+                <div class="resultName">
+        
+                </div>
+                <div class="resultImg">
+        
+                </div>
+                <h3>내 성향은?</h3>
+                <div class="resultDesc">
+        
+                </div>
+                <h4>나와 같은사람들이 선호하는 플레이리스트!</h3>
+                <div class="playList">
+                    <div class="song"></div>
+                    <div class="song"></div>
+                    <div class="song"></div>
+                </div>
+                <button onclick="js:reGame()">
+                    다시하기
+                </button>
+                <button class="share-or-copy">
+                    공유하기
+                </button>
+            </div>
+        </section>
+    </div>
 
-        </div>
-        <div class="answerBox">
-
-        </div>
-    </section>
-    <section id="result">
-        <h2>해당하는 MBTI는?</h2>
-        <div class="resultName">
-
-        </div>
-        <div class="resultImg">
-
-        </div>
-        <h3>내 성향은?</h3>
-        <div class="resultDesc">
-
-        </div>
-        <h4>나와 같은사람들이 선호하는 플레이리스트!</h3>
-        <div class="playList">
-            <div class="song"></div>
-            <div class="song"></div>
-            <div class="song"></div>
-        </div>
-        <button onclick="js:reGame()">
-            다시하기
-        </button>
-        <button class="share-or-copy">
-            공유하기
-        </button>
-    </section>
+    
 </body>
 </html>
