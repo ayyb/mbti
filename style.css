@@ -137,6 +137,7 @@ body button {
 
 /*result*/
 #result {
+  height: auto;
   display: none;
 }
 #result .inner button {
@@ -159,7 +160,7 @@ body button {
 /*mobile*/
 @media screen and (max-width: 500px) {
   #main h1 {
-    padding-top: 5vw;
+    padding-top: 13vw;
     font-size: 11vw;
   }
   #main img {
@@ -228,6 +229,7 @@ body button {
   }
   /*result*/
   #result {
+    height: auto;
     display: none;
   }
   #result .inner button {

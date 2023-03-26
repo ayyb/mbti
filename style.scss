@@ -160,6 +160,7 @@ body{
 
 /*result*/
 #result{
+    height:auto;
     display: none;
     .inner{
         button{
@@ -174,7 +175,7 @@ body{
 @media screen and (max-width: 500px) {
     #main{
         h1{
-            padding-top:5vw;
+            padding-top:13vw;
             font-size:11vw;
         }
         img{
@@ -237,6 +238,7 @@ body{
 
     /*result*/
     #result{
+        height:auto;
         display: none;
         .inner{
             button{
