@@ -65,7 +65,7 @@ body{
         box-sizing: border-box;
         // background: tomato; 
         //@include center;
-        height: 100vh;
+        min-height: 80vh;
         .inner{
             // background: blue;
             margin:0 auto;
@@ -161,7 +161,6 @@ body{
 
 /*result*/
 #result{
-    height:auto;
     display: none;
     .inner{
         button{
@@ -240,7 +239,6 @@ body{
 
     /*result*/
     #result{
-        height:auto;
         display: none;
         .inner{
             button{
