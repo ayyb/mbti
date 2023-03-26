@@ -174,7 +174,7 @@ body{
 @media screen and (max-width: 500px) {
     #main{
         h1{
-            margin-top: 10vw;
+            padding-top:5vw;
             font-size:11vw;
         }
         img{
@@ -183,7 +183,7 @@ body{
         }
         p{
             font-size: 6vw;
-            margin-bottom: 5.5vw;
+            margin-bottom: 9.5vw;
         }
         .start{
             @include btn-style;
