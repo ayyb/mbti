@@ -93,6 +93,7 @@ body{
     }
     .start{
         @include btn-style;
+        padding:1vw 9vw;
     }
 }
 
@@ -189,6 +190,7 @@ body{
         .start{
             @include btn-style;
             font-size: 7vw;
+            padding: 1vw 9vw;
         }
     }
 

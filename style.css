@@ -57,6 +57,7 @@ body button {
   box-sizing: border-box;
   background: #000;
   color: #fff;
+  padding: 1vw 9vw;
 }
 #main .start:hover, #main .start:focus, #main .start:active {
   background: #FEA8A7;
@@ -180,6 +181,7 @@ body button {
     background: #000;
     color: #fff;
     font-size: 7vw;
+    padding: 1vw 9vw;
   }
   #main .start:hover, #main .start:focus, #main .start:active {
     background: #FEA8A7;
