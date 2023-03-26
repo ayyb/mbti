@@ -160,13 +160,13 @@ body button {
 @media screen and (max-width: 500px) {
   #main h1 {
     padding-top: 10vw;
-    font-size: 9vw;
+    font-size: 11vw;
   }
   #main img {
-    width: 70%;
+    width: 85%;
   }
   #main p {
-    font-size: 5vw;
+    font-size: 6.5vw;
     margin-bottom: 4.5vw;
   }
   #main .start {
@@ -177,7 +177,7 @@ body button {
     box-sizing: border-box;
     background: #000;
     color: #fff;
-    font-size: 6vw;
+    font-size: 7vw;
   }
   #main .start:hover, #main .start:focus, #main .start:active {
     background: #FEA8A7;
@@ -230,6 +230,6 @@ body button {
     display: none;
   }
   #result .inner button {
-    font-size: 6vw;
+    font-size: 7vw;
   }
 }/*# sourceMappingURL=style.css.map */
