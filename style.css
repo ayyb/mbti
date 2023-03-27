@@ -2,13 +2,12 @@
 /*기본 layout*/
 body {
   width: 100%;
-  font-family: "godoMaum";
-  font-weight: normal;
+  font-family: "NanumSquareRoundOTF";
   background: #fff;
 }
 body button {
   border: none;
-  font-family: "godoMaum";
+  font-family: "Cafe24 Ssurround";
   font-weight: normal;
 }
 
@@ -38,26 +37,31 @@ body button {
 
 /*main*/
 #main h1 {
+  font-family: "Cafe24 Ssurround";
+  font-size: 2.5vw;
   margin-top: 2vw;
-  font-size: 3.516vw;
+  margin-bottom: 2.5vw;
 }
 #main img {
-  width: 30%;
+  width: 22%;
+  border-radius: 40px;
+  margin-bottom: 2.5vw;
 }
 #main p {
-  font-size: 2.031vw;
+  font-size: 1.5vw;
   margin-bottom: 2.5vw;
   text-align: center;
+  line-height: 1.5;
 }
 #main .start {
-  font-size: 2.031vw;
+  font-family: "Cafe24 Ssurround";
+  font-size: 1.25vw;
   cursor: pointer;
-  padding: 0.5vw 7vw;
+  padding: 1vw 5vw;
   border-radius: 40px;
   box-sizing: border-box;
   background: #000;
   color: #fff;
-  padding: 1vw 9vw;
 }
 #main .start:hover, #main .start:focus, #main .start:active {
   background: #FEA8A7;
@@ -77,13 +81,14 @@ body button {
 }
 #qna .progress-bar .txt-box {
   margin-bottom: 2vw;
+  font-family: "NanumSquareRoundOTF";
 }
 #qna .progress-bar .txt-box .title {
-  font-size: 1.25vw;
+  font-size: 0.9vw;
   float: left;
 }
 #qna .progress-bar .txt-box .count {
-  font-size: 1.25vw;
+  font-size: 0.9vw;
   float: right;
 }
 #qna .progress-bar .progress {
@@ -104,13 +109,14 @@ body button {
   transition: all 0.7s ease;
 }
 #qna .qBox {
-  font-size: 2.5vw;
+  font-family: "Cafe24 Ssurround";
+  font-size: 2vw;
   padding: 1vw 2vw;
   box-sizing: border-box;
   margin-bottom: 2vw;
 }
 #qna img {
-  width: 18%;
+  width: 23%;
   margin-bottom: 2.75vw;
 }
 #qna .answerBox {
@@ -118,7 +124,8 @@ body button {
   flex-direction: column;
 }
 #qna .answerBox .answerList {
-  font-size: 1.75vw;
+  font-family: "NanumSquareRoundOTF";
+  font-size: 1.2vw;
   cursor: pointer;
   padding: 2vw 5vw;
   box-sizing: border-box;
@@ -140,16 +147,24 @@ body button {
 #result {
   display: none;
 }
-#result .inner button {
-  font-size: 2.031vw;
+#result .inner h2, #result .inner .resultName, #result .inner h3, #result .inner h4 {
+  font-family: "Cafe24 Ssurround";
+}
+#result .inner .resultBtn {
+  display: flex;
+  justify-content: space-between;
+}
+#result .inner .resultBtn button {
+  font-family: "Cafe24 Ssurround";
+  font-size: 1.25vw;
   cursor: pointer;
-  padding: 0.5vw 7vw;
+  padding: 1vw 5vw;
   border-radius: 40px;
   box-sizing: border-box;
   background: #000;
   color: #fff;
 }
-#result .inner button:hover, #result .inner button:focus, #result .inner button:active {
+#result .inner .resultBtn button:hover, #result .inner .resultBtn button:focus, #result .inner .resultBtn button:active {
   background: #FEA8A7;
   color: #000;
   transition: all 0.1s ease;
@@ -172,9 +187,10 @@ body button {
     margin-bottom: 13vw;
   }
   #main .start {
-    font-size: 2.031vw;
+    font-family: "Cafe24 Ssurround";
+    font-size: 1.25vw;
     cursor: pointer;
-    padding: 0.5vw 7vw;
+    padding: 1vw 5vw;
     border-radius: 40px;
     box-sizing: border-box;
     background: #000;

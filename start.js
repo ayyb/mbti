@@ -4,6 +4,7 @@ const result = document.querySelector("#result");
 const songs = document.querySelectorAll('.song');
 const progressValueEl = document.querySelector('.progress .value');
 const countNumber = document.querySelector('.num');
+const qBoxImg = document.getElementById('qImg');
 const endPoint = 12; //문제 갯수
 
 let qIdx = 0;
@@ -27,8 +28,18 @@ function goNext(qIdx) {
   for (let i in qnaList[qIdx].a) {
     addAnswer(qnaList[qIdx].a[i].answer, qnaList[qIdx].a[i].value);
   }
-  progressValueEl.style.width = (qIdx + 1) * 8.33 + '%'
+  progressValueEl.style.width = (qIdx + 1) * 8.33 + '%';
+
+  for(let n=0; n<endPoint; n++){
+    if(qIdx == n){
+      qBoxImg.src = "img/q_"+ (n+1) + ".png";
+      qBoxImg.transition="all 0.3s ease";
+    }
+  }
 }
+
+
+
 
 function addAnswer(answerText, value) {
   var a = document.querySelector(".answerBox");

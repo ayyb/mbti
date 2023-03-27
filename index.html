@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>나에게 맞는 플레이 리스트는?</title>
+    <title>나와 어울리는 K-POP 플레이 리스트는?</title>
     <link rel="stylesheet" href="./reset.css">
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./font.css">
@@ -20,8 +20,8 @@
         <!-- main -->
         <section id="main" data-aos="fade-down">
             <div class="inner">
-                <h1>나에게 맞는 플레이리스트는?</h1>
-                <img src="./img/main.png" alt="메인이미지"/>
+                <h1>나와 어울리는 K-POP 플레이리스트는?</h1>
+                <img src="./img/main.gif" alt="메인이미지"/>
                 <p>
                     내 성격으로 알아보는 추천 음악 테스트!<br>
                     내게 맞는 플레이리스트를 찾아보자!
@@ -48,7 +48,7 @@
                 <div class="qBox">
         
                 </div>
-                <img src="img/answer.png" alt="답변페이지 이미지">
+                <img id="qImg" src="img/answer.png" alt="답변페이지 이미지">
                 <!-- 답 -->
                 <div class="answerBox">
         
@@ -58,7 +58,7 @@
         <!-- result -->
         <section id="result">
             <div class="inner">
-                <h2>해당하는 MBTI는?</h2>
+                <h2>당신의 MBTI 유형은?</h2>
                 <div class="resultName">
         
                 </div>
@@ -75,12 +75,14 @@
                     <div class="song"></div>
                     <div class="song"></div>
                 </div>
-                <button onclick="js:reGame()">
-                    다시하기
-                </button>
-                <button class="share-or-copy">
-                    공유하기
-                </button>
+                <div class="resultBtn">
+                    <button onclick="js:reGame()">
+                        다시하기
+                    </button>
+                    <button class="share-or-copy">
+                        공유하기
+                    </button>
+                </div>
             </div>
         </section>
     </div>
