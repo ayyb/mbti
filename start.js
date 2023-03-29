@@ -66,16 +66,19 @@ function goResult() {
   qna.style.display = "none";
   result.style.display = "grid";
 
-  const resultName = document.querySelector(".resultName");
+  const resultType = document.getElementById("resultType");
+  const resultInfo = document.getElementById("resultInfo");
+  const resultImg = document.getElementById("resultImg");
+  const resultDesc = document.querySelector(".resultDesc");
+
   console.log(anserResult);
   let number = "";
   number = infoList.findIndex((x) => x.type === anserResult);
   console.log(number);
   console.log(infoList[number].name);
-  resultName.innerHTML = infoList[number].name;
-  // const resultImg = document.querySelector('.resultImg');
-  // resultImg.src = infoList[number].img;
-  const resultDesc = document.querySelector(".resultDesc");
+  resultType.innerHTML = infoList[number].type;
+  resultInfo.innerHTML = infoList[number].name;
+  resultImg.src = infoList[number].img;
   resultDesc.innerHTML = infoList[number].desc;
 
   songs.forEach(function (song, index) {

@@ -115,17 +115,20 @@ const qnaList = [
   },
 ];
 
+
 const infoList = [
   {
     type: "ISTJ",
-    name: "ISTJ - 청렴결백한 논리주의자",
+    name: "청렴결백한 논리주의자",
+    img: "img/istj.png",
     desc: "클래식 음악, 재즈, 블루스, 팝 뮤직 등 전통적인 음악 스타일을 선호합니다. 또한, 가사보다는 멜로디와 악기 소리에 집중하는 경향이 있습니다.",
     
     songs: ["Butter - BTS", "Dynamite - BTS", "I Am the Best - 2NE1"],
   },
   {
     type: "ISFJ",
-    name: "ISFJ - 용감한 수호자",
+    name: "용감한 수호자",
+    img: "img/isfj.png",
     desc: "연인과 함께 듣기 좋은 러브송, 발라드, 뉴에이지, 클래식 등 차분하고 감성적인 음악을 선호합니다. 가사에 담긴 이야기에 공감하는 경향이 있습니다.",
     songs: [
       '"Don\'t Wanna Cry" - SEVENTEEN',
@@ -135,8 +138,9 @@ const infoList = [
   },
   {
     type: "INFJ",
-    name: "INFJ - 선의의 옹호자",
-    desc: "",
+    name: "선의의 옹호자",
+    img: "img/infj.png",
+    desc: "감성적이며 의미있는 가사를 선호합니다. 독특하며 몽환적인 사운드의 멜로디에 꽂히는 경향이 있습니다.",
     songs: [
       '"Spring Day" - BTS',
       '"Butterfly" - BTS',
@@ -145,7 +149,8 @@ const infoList = [
   },
   {
     type: "INTJ",
-    name: "INTJ - 용의주도한 전략가",
+    name: "용의주도한 전략가",
+    img: "img/intj.png",
     desc: "어쿠스틱, 포크, 인디 등 조용하고 차분한 분위기의 음악을 선호합니다. 감성적인 가사와 음악으로 자신의 감정을 표현하는 것을 좋아합니다",
     songs: [
       '"MIC Drop" - BTS feat. Steve Aoki',
@@ -155,7 +160,8 @@ const infoList = [
   },
   {
     type: "ISTP",
-    name: "ISTP - 만능 재주꾼",
+    name: "만능 재주꾼",
+    img: "img/istp.png",
     desc: "록, 메탈, 클래식 등 고성능의 음악을 선호합니다. 멜로디와 가사 모두에 대해 분석적으로 접근하며, 자신의 이야기를 담은 곡을 선호합니다.",
     songs: [
       '"Adore U" - SEVENTEEN',
@@ -165,13 +171,15 @@ const infoList = [
   },
   {
     type: "ISFP",
-    name: "ISFP - 호기심 많은 예술가",
+    name: "호기심 많은 예술가",
+    img: "img/isfp.png",
     desc: "포크, 팝, 발라드 등 감성적이고 노래 가사에 이야기가 있는 음악을 선호합니다. 음악을 듣으면서 자신의 감정을 잘 표현할 수 있습니다.",
     songs: ['"Siren" - Sunmi', '"Love Myself" - BTS', '"Aya" - MAMAMOO'],
   },
   {
     type: "INFP",
-    name: "INFP - 열정적인 중재자",
+    name: "열정적인 중재자",
+    img: "img/infp.png",
     desc: "인디, 포크, 어쿠스틱 등 조용하고 차분한 분위기의 음악을 선호합니다. 감성적인 가사와 음악으로 자신의 감정을 표현하는 것을 좋아합니다.",
     songs: [
       '"Psycho" - Red Velvet',
@@ -181,13 +189,15 @@ const infoList = [
   },
   {
     type: "INTP",
-    name: "INTP - 논리적인 사색가",
+    name: "논리적인 사색가",
+    img: "img/intp.png",
     desc: "재즈, 클래식, 인디 등 심도있는 음악을 선호합니다. 혼자 있는 시간을 즐기며, 음악을 통해 자신만의 세계를 창조합니다.",
     songs: ['"TT" - TWICE', '"Fake Love" - BTS', '"Love Whisper" - GFRIEND'],
   },
   {
     type: "ESTP",
-    name: "ESTP - 모험을 즐기는 사업가",
+    name: "모험을 즐기는 사업가",
+    img: "img/estp.png",
     desc: "힙합, 댄스 뮤직, 록 등 다양한 장르의 흥겨운 음악을 선호합니다. 공연이나 파티 등 활발한 분위기를 좋아하며, 리듬에 맞춰 춤을 추는 것을 좋아합니다.",
     songs: [
       '"Black Mamba" - aespa',
@@ -197,7 +207,8 @@ const infoList = [
   },
   {
     type: "ESFP",
-    name: "ESFP - 자유로운 영혼의 연예인",
+    name: "자유로운 영혼의 연예인",
+    img: "img/esfp.png",
     desc: "댄스 뮤직, 일렉트로닉, 클럽 음악 등 파티와 춤을 즐기는 음악을 선호합니다. 높은 음량과 리듬감 있는 음악을 좋아하며, 다른 사람들과 함께 즐기는 것을 좋아합니다.",
     songs: [
       '"Dolphin" - Oh My Girl',
@@ -207,7 +218,8 @@ const infoList = [
   },
   {
     type: "ENFP",
-    name: "ENFP - 재기발랄한 활동가",
+    name: "재기발랄한 활동가",
+    img: "img/enfp.png",
     desc: "인디, 어쿠스틱, 팝 뮤직 등 감성적이면서도 자유로운 분위기의 음악을 선호합니다. 다양한 장르의 음악을 즐기며, 자신의 감정을 표현하는 것을 좋아합니다.",
     songs: [
       '"Don\'t Stop Me Now" - SF9',
@@ -217,7 +229,8 @@ const infoList = [
   },
   {
     type: "ENTP",
-    name: "ENTP - 뜨거운 논쟁을 즐기는 변론가",
+    name: "뜨거운 논쟁을 즐기는 변론가",
+    img: "img/entp.png",
     desc: "힙합, 일렉트로닉, 인디 등 혁신적이면서도 강렬한 음악을 선호합니다. 다양한 음악을 시도해보며, 가사에 담긴 이야기보다는 음악 자체에 집중합니다.",
     songs: [
       '"Fire Truck" - NCT 127',
@@ -227,7 +240,8 @@ const infoList = [
   },
   {
     type: "ESTJ",
-    name: "ESTJ - 엄격한 관리자",
+    name: "엄격한 관리자",
+    img: "img/estj.png",
     desc: " 뮤직, 힙합, 록 등 판타지풀하고 무거운 음악을 선호합니다. 가사보다는 멜로디와 리듬에 집중하는 경향이 있습니다.",
     songs: [
       '"Bon Bon Chocolat" - EVERGLOW',
@@ -237,7 +251,8 @@ const infoList = [
   },
   {
     type: "ESFJ",
-    name: "ESFJ - 사교적인 외교관",
+    name: "사교적인 외교관",
+    img: "img/esfj.png",
     desc: "댄스 뮤직, R&B, 발라드 등 열정적이고 흥겨운 음악을 선호합니다. 다른 사람들과 함께 음악을 즐기며, 가사에 담긴 이야기를 좋아합니다.",
     songs: [
       '"Ice Cream" - BLACKPINK & Selena Gomez',
@@ -247,7 +262,8 @@ const infoList = [
   },
   {
     type: "ENFJ",
-    name: "ENFJ - 정의로운 사회운동가",
+    name: "정의로운 사회운동가",
+    img: "img/enfj.png",
     desc: "팝 뮤직, R&B, 발라드 등 감성적이면서도 화려한 음악을 선호합니다. 자신의 감정을 노래로 표현하는 것을 좋아합니다.",
     songs: [
       '"A.D.T.O.Y." - 2PM',
@@ -257,7 +273,8 @@ const infoList = [
   },
   {
     type: "ENTJ",
-    name: "ENTJ - 대담한 통솔자",
+    name: "대담한 통솔자",
+    img: "img/entj.png",
     desc: "록, 힙합, 인디 등 자신의 성격과 일치하는 음악을 선호합니다. 경쾌하고 활기찬 음악을 좋아하며, 가사에 담긴 내용보다는 멜로디와 리듬에 집중합니다.",
     songs: ['"Growl" - EXO', '"No More Dream" - BTS', '"Regular" - NCT 127'],
   },
