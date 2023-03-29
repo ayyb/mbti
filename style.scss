@@ -243,14 +243,15 @@ body{
                 }
                 .songDesc{
                     @include center;
+                    width:50%;
                     box-sizing: border-box;
                     margin: 0 5vw;
-                    #songTitle{
+                    .songTitle{
                         @include title-font;
                         font-size: 1.75vw;
                         margin-bottom: 1vw;
                     }
-                    #artist{
+                    .artist{
                         font-size: 0.8vw;
                     }
                 }

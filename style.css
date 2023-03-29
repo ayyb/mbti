@@ -216,15 +216,16 @@ body button {
   display: grid;
   place-items: center;
   align-content: center;
+  width: 50%;
   box-sizing: border-box;
   margin: 0 5vw;
 }
-#result .inner .playList .song .songDesc #songTitle {
+#result .inner .playList .song .songDesc .songTitle {
   font-family: "Cafe24 Ssurround";
   font-size: 1.75vw;
   margin-bottom: 1vw;
 }
-#result .inner .playList .song .songDesc #artist {
+#result .inner .playList .song .songDesc .artist {
   font-size: 0.8vw;
 }
 #result .inner .playList .song .playIcon {

@@ -1,7 +1,7 @@
 const qna = document.querySelector("#qna");
 const main = document.querySelector("#main");
 const result = document.querySelector("#result");
-const songs = document.querySelectorAll('.song');
+//const songs = document.querySelectorAll('.song');
 const progressValueEl = document.querySelector('.progress .value');
 const countNumber = document.querySelector('.num');
 const qBoxImg = document.getElementById('qImg');
@@ -80,9 +80,32 @@ function goResult() {
   resultImg.src = infoList[number].img;
   resultDesc.innerHTML = infoList[number].desc;
 
-  songs.forEach(function (song, index) {
+  const songImgs = document.querySelectorAll('.song-img');
+  const songTitles = document.querySelectorAll('.songTitle');
+  const artists = document.querySelectorAll('.artist');
+  const songLinks = document.querySelectorAll('.songLink');
+
+  songImgs.forEach(function (songimg, index){
+    songimg.src = infoList[number].songs[index].img;
+    //console.log(infoList[number].songs[index].img);
+  });
+  songTitles.forEach(function (songTitle, index){
+    songTitle.innerHTML = infoList[number].songs[index].songtitle;
+    //console.log(infoList[number].songs[index].songtitle);
+  });
+  artists.forEach(function(artistName, index){
+    artistName.innerHTML = infoList[number].songs[index].artist;
+  });
+  songLinks.forEach(function(songLink, index){
+    songLink.setAttribute('href', infoList[number].songs[index].link);
+    songLink.setAttribute('target', '_blank');
+    //console.log(songLink.getAttribute('href'));
+  });
+
+
+  /*songs.forEach(function (song, index) {
     song.innerHTML = infoList[number].songs[index]
-  })
+  })*/
 }
 
 function reGame() {
