@@ -33,7 +33,6 @@ function goNext(qIdx) {
   for(let n=0; n<endPoint; n++){
     if(qIdx == n){
       qBoxImg.src = "img/q_"+ (n+1) + ".png";
-      qBoxImg.transition="all 0.3s ease";
     }
   }
 }
