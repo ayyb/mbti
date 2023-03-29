@@ -49,7 +49,7 @@ body button {
   margin-bottom: 2.5vw;
 }
 #main p {
-  font-size: 1.5vw;
+  font-size: 1.25vw;
   margin-bottom: 2.5vw;
   text-align: center;
   line-height: 1.5;
@@ -167,11 +167,11 @@ body button {
 }
 #result .inner .resultName #resultInfo {
   font-size: 1.5vw;
-  margin-bottom: 2.5vw;
+  margin-bottom: 4vw;
 }
 #result .inner .resultImg {
   width: 25%;
-  margin-bottom: 2.5vw;
+  margin-bottom: 4vw;
 }
 #result .inner .resultImg #resultImg {
   width: 100%;
@@ -184,7 +184,7 @@ body button {
 #result .inner .resultDesc {
   width: 50%;
   line-height: 1.3;
-  margin-bottom: 2.5vw;
+  margin-bottom: 5vw;
 }
 #result .inner .playList {
   margin-bottom: 2.5vw;
