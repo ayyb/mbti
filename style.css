@@ -70,6 +70,9 @@ body button {
   transition: all 0.1s ease;
   box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
 }
+#main .madeBy {
+  font-size: 0.8vw;
+}
 
 /*qna*/
 #qna {
@@ -175,19 +178,65 @@ body button {
 }
 #result .inner .resultImg #resultImg {
   width: 100%;
-  max-width: 330px;
 }
 #result .inner h3, #result .inner h4 {
   font-size: 1.5vw;
-  margin-bottom: 1.5vw;
+  margin-bottom: 4vw;
 }
 #result .inner .resultDesc {
   width: 50%;
   line-height: 1.3;
+  font-size: 1.25vw;
   margin-bottom: 5vw;
 }
 #result .inner .playList {
-  margin-bottom: 2.5vw;
+  margin-bottom: 1vw;
+}
+#result .inner .playList .song {
+  border-radius: 20px;
+  background: #FCF2F1;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 1.2vw 2vw;
+  margin-bottom: 2vw;
+  box-sizing: border-box;
+}
+#result .inner .playList .song:hover, #result .inner .playList .song:active, #result .inner .playList .song:focus {
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+#result .inner .playList .song .songImg {
+  width: 15%;
+}
+#result .inner .playList .song .songImg img {
+  width: 100%;
+  border-radius: 20px;
+}
+#result .inner .playList .song .songDesc {
+  display: grid;
+  place-items: center;
+  align-content: center;
+  box-sizing: border-box;
+  margin: 0 5vw;
+}
+#result .inner .playList .song .songDesc #songTitle {
+  font-family: "Cafe24 Ssurround";
+  font-size: 1.75vw;
+  margin-bottom: 1vw;
+}
+#result .inner .playList .song .songDesc #artist {
+  font-size: 0.8vw;
+}
+#result .inner .playList .song .playIcon {
+  display: grid;
+  place-items: center;
+  align-content: center;
+}
+#result .inner .playList .song .playIcon a:hover, #result .inner .playList .song .playIcon a:active, #result .inner .playList .song .playIcon a:focus {
+  color: #FEA8A7;
+}
+#result .inner .playList .song .playIcon a i {
+  font-size: 1.5vw;
 }
 #result .inner .resultBtn {
   display: flex;
@@ -203,7 +252,7 @@ body button {
   background: #000;
   color: #fff;
   padding: 1vw 3vw;
-  margin: 5vw;
+  margin: 3vw 5vw;
 }
 #result .inner .resultBtn button:hover, #result .inner .resultBtn button:focus, #result .inner .resultBtn button:active {
   background: #FEA8A7;

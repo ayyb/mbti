@@ -81,7 +81,6 @@ function goResult() {
   resultDesc.innerHTML = infoList[number].desc;
 
   songs.forEach(function (song, index) {
-
     song.innerHTML = infoList[number].songs[index]
   })
 }

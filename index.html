@@ -13,6 +13,7 @@
     <!-- js -->
     <script src = "./data.js" defer></script>
     <script src = "./start.js" defer></script>
+    <script src="https://kit.fontawesome.com/3f4ea489e8.js" crossorigin="anonymous"></script>
     
 </head>
 <body>
@@ -29,6 +30,12 @@
                 <button class="start" onclick="js:begin()">
                     누르면 시작!
                 </button>
+                <p class="useCount">
+                    <!-- 참여자수 -->
+                </p>
+                <p class="madeBy">
+                    만든이: ayyb, soySoSoy
+                </p>
             </div>
         </section>
         <!-- 질문&답 -->
@@ -76,9 +83,42 @@
                 </div>
                 <h4>추천 플레이리스트</h4>
                 <div class="playList">
-                    <div class="song"></div>
-                    <div class="song"></div>
-                    <div class="song"></div>
+                    <div class="song">
+                        <div class="songImg">
+                            <img id="songImg" src="img/song_example.png" alt="음반 이미지">
+                        </div>
+                        <div class="songDesc">
+                            <p id="songTitle">Hype Boy</p>
+                            <p id="artist">뉴진스(NewJeans)</p>
+                        </div>
+                        <div class="playIcon">
+                            <a id="songLink" href="#"><i class="fa-solid fa-circle-play"></i></a>
+                        </div>
+                    </div>
+                    <div class="song">
+                        <div class="songImg">
+                            <img id="songImg" src="img/song_example.png" alt="음반 이미지">
+                        </div>
+                        <div class="songDesc">
+                            <p id="songTitle">Dynamite</p>
+                            <p id="artist">BTS</p>
+                        </div>
+                        <div class="playIcon">
+                            <a id="songLink" href="#"><i class="fa-solid fa-circle-play"></i></a>
+                        </div>
+                    </div>
+                    <div class="song">
+                        <div class="songImg">
+                            <img id="songImg" src="img/song_example.png" alt="음반 이미지">
+                        </div>
+                        <div class="songDesc">
+                            <p id="songTitle">Love Dive</p>
+                            <p id="artist">아이브(Ive)</p>
+                        </div>
+                        <div class="playIcon">
+                            <a id="songLink" href="#"><i class="fa-solid fa-circle-play"></i></a>
+                        </div>
+                    </div>
                 </div>
                 <div class="resultBtn">
                     <button onclick="js:reGame()">

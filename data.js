@@ -122,8 +122,10 @@ const infoList = [
     name: "청렴결백한 논리주의자",
     img: "img/istj.png",
     desc: "클래식 음악, 재즈, 블루스, 팝 뮤직 등 전통적인 음악 스타일을 선호합니다. 또한, 가사보다는 멜로디와 악기 소리에 집중하는 경향이 있습니다.",
-    
-    songs: ["Butter - BTS", "Dynamite - BTS", "I Am the Best - 2NE1"],
+    songs: [
+      {img: "img/song_example.png", artist: "BTS", songtitle: "Butter", link: "https://www.youtube.com/" },
+      {img: "img/song_example.png", artist: "BTS", songtitle: "Dynamite", link: "https://www.youtube.com/"},
+      {img: "img/song_example.png", artist: "2NE1", songtitle: "내가 제일 잘나가", link: "https://www.youtube.com/"}]
   },
   {
     type: "ISFJ",

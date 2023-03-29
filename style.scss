@@ -109,6 +109,9 @@ body{
     .start{
         @include btn-style;
     }
+    .madeBy{
+        font-size: 0.8vw;
+    }
 }
 
 
@@ -203,20 +206,67 @@ body{
             margin-bottom: 4vw;
             #resultImg{
                 width:100%;
-                max-width: 330px;
+                //max-width: 330px;
             }
         }
         h3, h4{
             font-size: 1.5vw;
-            margin-bottom: 1.5vw;
+            margin-bottom: 4vw;
         }
         .resultDesc{
             width: 50%;
             line-height: 1.3;
+            font-size: 1.25vw;
             margin-bottom: 5vw;
         }
         .playList{
-            margin-bottom: 2.5vw;
+            margin-bottom: 1vw;
+            .song{
+                border-radius: 20px;
+                background: $bg-color;
+                display:flex;
+                justify-content: space-evenly;
+                padding: 1.2vw 2vw;
+                margin-bottom: 2vw;
+                box-sizing: border-box;
+                &:hover, &:active, &:focus{
+                    box-shadow: 3px 3px 3px rgba(0,0,0,0.3);
+                    cursor:pointer;
+                }
+                .songImg{
+                    width: 15%;
+                    //margin-right: 4vw;
+                    img{
+                        width:100%;
+                        border-radius: 20px;
+                    }
+                }
+                .songDesc{
+                    @include center;
+                    box-sizing: border-box;
+                    margin: 0 5vw;
+                    #songTitle{
+                        @include title-font;
+                        font-size: 1.75vw;
+                        margin-bottom: 1vw;
+                    }
+                    #artist{
+                        font-size: 0.8vw;
+                    }
+                }
+                .playIcon{
+                    @include center;
+                    //margin-left:1vw;
+                    a{
+                        &:hover, &:active, &:focus{
+                            color:$point-color;
+                        }
+                        i{
+                            font-size:1.5vw;
+                        }
+                    }
+                }
+            }
         }
         .resultBtn{
             display: flex;
@@ -224,7 +274,7 @@ body{
             button{
                 @include btn-style;
                 padding:1vw 3vw;
-                margin: 5vw;
+                margin: 3vw 5vw;
                 &:hover, &:focus, &:active{
                     background: $bg-color;
                     color:$btn-color;
