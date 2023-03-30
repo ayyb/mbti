@@ -125,7 +125,8 @@ const infoList = [
     songs: [
       {img: "img/song_example.png", artist: "BTS", songtitle: "Butter", link: "https://www.youtube.com/" },
       {img: "img/song_example.png", artist: "BTS", songtitle: "Dynamite", link: "https://www.youtube.com/"},
-      {img: "img/song_example.png", artist: "2NE1", songtitle: "내가 제일 잘나가", link: "https://www.youtube.com/"}]
+      {img: "img/song_example.png", artist: "2NE1", songtitle: "내가 제일 잘나가", link: "https://www.youtube.com/"}],
+    playlistId:'https://open.spotify.com/playlist/3Zby0t1ttHcgjADrsHhjbC?si=000a02314534426e',
   },
   {
     type: "ISFJ",
@@ -137,6 +138,7 @@ const infoList = [
       '"Fancy" - TWICE',
       '"Love Shot" - EXO',
     ],
+    playlistId:'https://open.spotify.com/playlist/6AkXoD8ZHt5to6m7N2zlJJ?si=6d59ba23fbe74bc3',
   },
   {
     type: "INFJ",
@@ -148,6 +150,7 @@ const infoList = [
       '"Butterfly" - BTS',
       '"Bad Boy" - Red Velvet',
     ],
+    playlistId:'https://open.spotify.com/playlist/60oM6XQFjIhCxDyCN7IVC2?si=f874d738a2c44d05',
   },
   {
     type: "INTJ",
@@ -159,6 +162,7 @@ const infoList = [
       '"Not Today" - BTS',
       '"Kill This Love" - BLACKPINK',
     ],
+    playlistId:'https://open.spotify.com/playlist/2BIIzQ5e4p1wgVhlyIszAb?si=c95f7a907efe47cd',
   },
   {
     type: "ISTP",
@@ -170,6 +174,7 @@ const infoList = [
       '"Pied Piper" - BTS',
       '"LALALILALA" - APRIL',
     ],
+    playlistId:'https://open.spotify.com/playlist/6Eq6AVnZYBlBlAZ2FXTX2d?si=a03992a7066e46ad',
   },
   {
     type: "ISFP",
@@ -177,6 +182,7 @@ const infoList = [
     img: "img/isfp.png",
     desc: "포크, 팝, 발라드 등 감성적이고 노래 가사에 이야기가 있는 음악을 선호합니다. 음악을 듣으면서 자신의 감정을 잘 표현할 수 있습니다.",
     songs: ['"Siren" - Sunmi', '"Love Myself" - BTS', '"Aya" - MAMAMOO'],
+    playlistId:'https://open.spotify.com/playlist/6RqwT8czU7pg6FATkdxUpl?si=3de79e6934ac401f',
   },
   {
     type: "INFP",
@@ -188,6 +194,7 @@ const infoList = [
       '"Spring Again" - Yerin Baek',
       '"Stay Beautiful" - BTS',
     ],
+    playlistId:'https://open.spotify.com/playlist/3M1lWcK4XReV3UrQrrG6e1?si=d5621ea12b68448c',
   },
   {
     type: "INTP",
@@ -195,6 +202,7 @@ const infoList = [
     img: "img/intp.png",
     desc: "재즈, 클래식, 인디 등 심도있는 음악을 선호합니다. 혼자 있는 시간을 즐기며, 음악을 통해 자신만의 세계를 창조합니다.",
     songs: ['"TT" - TWICE', '"Fake Love" - BTS', '"Love Whisper" - GFRIEND'],
+    playlistId:'https://open.spotify.com/playlist/176YtgGE3HDxAU9idWqH2A?si=eb4aacca165642ad',
   },
   {
     type: "ESTP",
@@ -206,6 +214,7 @@ const infoList = [
       '"Naughty" - Red Velvet - Irene & Seulgi',
       '"PUMA" - TXT',
     ],
+    playlistId:'https://open.spotify.com/playlist/3NlSWbuesASVLz578zZnFn?si=09656095ccc24d89',
   },
   {
     type: "ESFP",
@@ -217,6 +226,7 @@ const infoList = [
       '"Dynamite" - BTS',
       '"Forever Young" - BLACKPINK',
     ],
+    playlistId:'https://open.spotify.com/playlist/22JnYyFZrLcMoOSVYXGF8E?si=41a1c10155794144',
   },
   {
     type: "ENFP",
@@ -228,6 +238,7 @@ const infoList = [
       '"So What" - LOONA',
       '"Alligator" - MONSTA X',
     ],
+    playlistId:'https://open.spotify.com/playlist/2Ik7oHOGRxi04ZDYFcysN6?si=7c5c5fb57ec44812',
   },
   {
     type: "ENTP",
@@ -239,6 +250,7 @@ const infoList = [
       '"Love Talk" - WayV',
       '"New Rules" - TXT',
     ],
+    playlistId:'https://open.spotify.com/playlist/4sHrp170qa1Zkesl5i3gXe?si=8e86034b372c4c6c',
   },
   {
     type: "ESTJ",
@@ -250,6 +262,7 @@ const infoList = [
       '"BOOMBAYAH" - BLACKPINK',
       '"Kick It" - NCT 127',
     ],
+    playlistId:'https://open.spotify.com/playlist/7ibe93MxMAYGTPe29RQW30?si=a8de548234a140df',
   },
   {
     type: "ESFJ",
@@ -261,6 +274,7 @@ const infoList = [
       '"Peek-A-Boo" - Red Velvet',
       '"The 7th Sense" - NCT U',
     ],
+    playlistId:'https://open.spotify.com/playlist/28d8LOxEHy1dCed4ochU9Q?si=fd1248fb4384493a',
   },
   {
     type: "ENFJ",
@@ -272,6 +286,7 @@ const infoList = [
       '"Blood Sweat & Tears" - BTS',
       '"Not Alone" - NCT 127',
     ],
+    playlistId:'https://open.spotify.com/playlist/10q3yHT5HjYgL1cQNURjZK?si=e9b4a77461dc4d8d',
   },
   {
     type: "ENTJ",
@@ -279,5 +294,6 @@ const infoList = [
     img: "img/entj.png",
     desc: "록, 힙합, 인디 등 자신의 성격과 일치하는 음악을 선호합니다. 경쾌하고 활기찬 음악을 좋아하며, 가사에 담긴 내용보다는 멜로디와 리듬에 집중합니다.",
     songs: ['"Growl" - EXO', '"No More Dream" - BTS', '"Regular" - NCT 127'],
+    playlistId:'https://open.spotify.com/playlist/0nPy9xoMPcUmW86w0O1wTj?si=579475b870324c3f',
   },
-]; e65c0c3ce790a2b44fe03c206a057186eb997125
+];
