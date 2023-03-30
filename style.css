@@ -1,45 +1,399 @@
+@charset "UTF-8";
+/*기본 layout*/
 body {
-  background-color: #FFe5e5;
+  width: 100%;
+  font-family: "NanumSquareRoundOTF";
+  background: #fff;
+}
+body button {
+  border: none;
+  font-family: "Cafe24 Ssurround";
+  font-weight: normal;
 }
 
-/*섹션 값 설정*/
-section {
+.container {
+  width: 100%;
+  max-width: 1920px;
+  background: #FCF2F1;
+  margin: 0 auto;
   display: grid;
   place-items: center;
   align-content: center;
-  min-height: 30vh;
+}
+.container section {
+  width: 100%;
+  padding: 3vw;
+  box-sizing: border-box;
+  min-height: 100vh;
+}
+.container section .inner {
+  margin: 0 auto;
+  box-sizing: border-box;
+  width: 92%;
+  display: grid;
+  place-items: center;
+  align-content: center;
 }
 
-#qna{
-    display: none;
+/*main*/
+#main h1 {
+  font-family: "Cafe24 Ssurround";
+  font-size: 2.5vw;
+  text-align: center;
+  margin-top: 2vw;
+  margin-bottom: 2.5vw;
 }
-#result{
-    display: none;
+#main img {
+  width: 22%;
+  border-radius: 40px;
+  margin-bottom: 2.5vw;
+}
+#main p {
+  font-size: 1.25vw;
+  margin-bottom: 2.5vw;
+  text-align: center;
+  line-height: 1.5;
+}
+#main .start {
+  font-family: "Cafe24 Ssurround";
+  font-size: 1.25vw;
+  cursor: pointer;
+  padding: 1vw 5vw;
+  border-radius: 40px;
+  box-sizing: border-box;
+  background: #000;
+  color: #fff;
+}
+#main .start:hover, #main .start:focus, #main .start:active {
+  background: #FEA8A7;
+  color: #000;
+  transition: all 0.1s ease;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+}
+#main .madeBy {
+  font-size: 0.8vw;
 }
 
-/* .answerList{
-  padding: 12px 5px;
-  margin: 10px;
-  text-transform: uppercase;
-  text-decoration: none;
-  font-size: 13px;
-  border-radius: 10px;
-  background: linear-gradient(90deg, #FFB103 0%, #FFB103 100%);
-} */
+/*qna*/
+#qna {
+  display: none;
+}
+#qna .progress-bar {
+  position: relative;
+  padding: 1vw;
+  box-sizing: border-box;
+}
+#qna .progress-bar .txt-box {
+  margin-bottom: 2vw;
+  font-family: "NanumSquareRoundOTF";
+}
+#qna .progress-bar .txt-box .title {
+  font-size: 0.9vw;
+  float: left;
+}
+#qna .progress-bar .txt-box .count {
+  font-size: 0.9vw;
+  float: right;
+}
+#qna .progress-bar .progress {
+  border-radius: 20px;
+  position: relative;
+  background: #fff;
+  width: 30vw;
+  height: 20px;
+}
+#qna .progress-bar .progress .value {
+  border-radius: 20px;
+  position: absolute;
+  background: #FEA8A7;
+  width: 0;
+  height: 20px;
+  top: 0;
+  left: 0;
+  transition: all 0.7s ease;
+}
+#qna .qBox {
+  font-family: "Cafe24 Ssurround";
+  font-size: 2vw;
+  padding: 1vw 2vw;
+  box-sizing: border-box;
+  margin-bottom: 2vw;
+}
+#qna img {
+  width: 23%;
+  margin-bottom: 2.75vw;
+}
+#qna .answerBox {
+  display: flex;
+  flex-direction: column;
+}
+#qna .answerBox .answerList {
+  font-family: "NanumSquareRoundOTF";
+  font-size: 1.2vw;
+  cursor: pointer;
+  padding: 2vw 5vw;
+  box-sizing: border-box;
+  border-radius: 20px;
+  background: #000;
+  color: #fff;
+}
+#qna .answerBox .answerList:hover, #qna .answerBox .answerList:focus, #qna .answerBox .answerList:active {
+  background: #FEA8A7;
+  color: #000;
+  transition: all 0.1s ease;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+}
+#qna .answerBox .answerList:nth-child(2n-1) {
+  margin-bottom: 1.5vw;
+}
 
-.progress {
-    max-width: 500px;
-    height: 20px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 60px;
-    border-radius: 10px;
-    background-color: #FFFFFF;
+/*result*/
+#result {
+  display: none;
+  background: #ffc7c7;
+}
+#result .inner h2, #result .inner .resultName, #result .inner h3, #result .inner h4 {
+  font-family: "Cafe24 Ssurround";
+}
+#result .inner > h2 {
+  font-size: 2vw;
+  margin-bottom: 2.5vw;
+}
+#result .inner .resultName {
+  display: grid;
+  place-items: center;
+  align-content: center;
+}
+#result .inner .resultName #resultType {
+  font-size: 3vw;
+  margin-bottom: 0.5vw;
+}
+#result .inner .resultName #resultInfo {
+  font-size: 1.5vw;
+  margin-bottom: 4vw;
+}
+#result .inner .resultImg {
+  width: 25%;
+  margin-bottom: 4vw;
+}
+#result .inner .resultImg #resultImg {
+  width: 100%;
+}
+#result .inner h3, #result .inner h4 {
+  font-size: 1.5vw;
+  margin-bottom: 4vw;
+}
+#result .inner .resultDesc {
+  width: 50%;
+  line-height: 1.3;
+  font-size: 1.25vw;
+  margin-bottom: 5vw;
+}
+#result .inner .playList {
+  margin-bottom: 1vw;
+}
+#result .inner .playList .song {
+  border-radius: 20px;
+  background: #FCF2F1;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 1.2vw 2vw;
+  margin-bottom: 2vw;
+  box-sizing: border-box;
+}
+#result .inner .playList .song:hover, #result .inner .playList .song:active, #result .inner .playList .song:focus {
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+#result .inner .playList .song .songImg {
+  width: 15%;
+}
+#result .inner .playList .song .songImg img {
+  width: 100%;
+  border-radius: 20px;
+}
+#result .inner .playList .song .songDesc {
+  display: grid;
+  place-items: center;
+  align-content: center;
+  width: 50%;
+  box-sizing: border-box;
+  margin: 0 5vw;
+}
+#result .inner .playList .song .songDesc .songTitle {
+  font-family: "Cafe24 Ssurround";
+  font-size: 1.75vw;
+  margin-bottom: 1vw;
+}
+#result .inner .playList .song .songDesc .artist {
+  font-size: 0.8vw;
+}
+#result .inner .playList .song .playIcon {
+  display: grid;
+  place-items: center;
+  align-content: center;
+}
+#result .inner .playList .song .playIcon a:hover, #result .inner .playList .song .playIcon a:active, #result .inner .playList .song .playIcon a:focus {
+  color: #FEA8A7;
+}
+#result .inner .playList .song .playIcon a i {
+  font-size: 1.5vw;
+}
+#result .inner .resultBtn {
+  display: flex;
+  justify-content: space-between;
+}
+#result .inner .resultBtn button {
+  font-family: "Cafe24 Ssurround";
+  font-size: 1.25vw;
+  cursor: pointer;
+  padding: 1vw 5vw;
+  border-radius: 40px;
+  box-sizing: border-box;
+  background: #000;
+  color: #fff;
+  padding: 1vw 3vw;
+  margin: 3vw 5vw;
+}
+#result .inner .resultBtn button:hover, #result .inner .resultBtn button:focus, #result .inner .resultBtn button:active {
+  background: #FEA8A7;
+  color: #000;
+  transition: all 0.1s ease;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+}
+#result .inner .resultBtn button:hover, #result .inner .resultBtn button:focus, #result .inner .resultBtn button:active {
+  background: #FCF2F1;
+  color: #000;
+  transition: all 0.1s ease;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+}
+
+/*responsive*/
+/*mobile*/
+@media screen and (max-width: 500px) {
+  #main h1 {
+    padding-top: 13vw;
+    font-size: 7vw;
+    line-height: 1.3;
+    margin-bottom: 10vw;
   }
-  .progress .value {
-    width: 10%;
-    height: 20px;
-    background-color: #FFB103;
-    border-radius: 10px;
-    transition: 0.2s;
+  #main img {
+    width: 65%;
+    margin-bottom: 9vw;
   }
+  #main p {
+    font-size: 3vw;
+    margin-bottom: 10vw;
+  }
+  #main .start {
+    font-family: "Cafe24 Ssurround";
+    font-size: 1.25vw;
+    cursor: pointer;
+    padding: 1vw 5vw;
+    border-radius: 40px;
+    box-sizing: border-box;
+    background: #000;
+    color: #fff;
+    font-size: 4vw;
+    padding: 2vw 8vw;
+  }
+  #main .start:hover, #main .start:focus, #main .start:active {
+    background: #FEA8A7;
+    color: #000;
+    transition: all 0.1s ease;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+  }
+  #qna {
+    display: none;
+  }
+  #qna .progress-bar {
+    margin-bottom: 5vw;
+  }
+  #qna .progress-bar .txt-box {
+    margin-bottom: 4vw;
+  }
+  #qna .progress-bar .txt-box .title {
+    font-size: 2vw;
+  }
+  #qna .progress-bar .txt-box .count {
+    font-size: 2vw;
+  }
+  #qna .progress-bar .progress {
+    width: 70vw;
+    max-width: 400px;
+    height: 4vw;
+  }
+  #qna .progress-bar .progress .value {
+    height: 4vw;
+  }
+  #qna .qBox {
+    font-size: 5.5vw;
+    line-height: 1.3;
+    padding: 1vw 2vw;
+    box-sizing: border-box;
+    margin-bottom: 10vw;
+  }
+  #qna img {
+    width: 60%;
+    margin-bottom: 10vw;
+  }
+  #qna .answerBox .answerList {
+    font-size: 3vw;
+    line-height: 1.3;
+    padding: 5vw 10vw;
+  }
+  #qna .answerBox .answerList:nth-child(2n-1) {
+    margin-bottom: 5vw;
+  }
+  /*result*/
+  #result {
+    padding-top: 13vw;
+  }
+  #result .inner > h2 {
+    font-size: 6vw;
+    margin-bottom: 10vw;
+  }
+  #result .inner .resultName {
+    display: grid;
+    place-items: center;
+    align-content: center;
+  }
+  #result .inner .resultName #resultType {
+    font-size: 9vw;
+    margin-bottom: 1.5vw;
+  }
+  #result .inner .resultName #resultInfo {
+    font-size: 4vw;
+    margin-bottom: 10vw;
+  }
+  #result .inner .resultImg {
+    width: 65%;
+    margin-bottom: 10vw;
+  }
+  #result .inner .resultImg #resultImg {
+    width: 100%;
+    max-width: 330px;
+  }
+  #result .inner h3, #result .inner h4 {
+    font-size: 3.5vw;
+    margin-bottom: 6vw;
+  }
+  #result .inner .resultDesc {
+    width: 70%;
+    font-size: 3vw;
+    line-height: 1.3;
+    margin-bottom: 8vw;
+  }
+  #result .inner .playList {
+    margin-bottom: 2.5vw;
+  }
+  #result .inner .playList .song {
+    font-size: 3vw;
+    margin-bottom: 1vw;
+  }
+  #result .inner .resultBtn button {
+    font-size: 3.25vw;
+    padding: 2vw 6vw;
+    margin: 5vw;
+  }
+}/*# sourceMappingURL=style.css.map */

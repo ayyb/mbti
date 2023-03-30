@@ -1,8 +1,10 @@
 const qna = document.querySelector("#qna");
 const main = document.querySelector("#main");
 const result = document.querySelector("#result");
-const songs = document.querySelectorAll('.song')
-const progressValueEl = document.querySelector('.progress .value')
+//const songs = document.querySelectorAll('.song');
+const progressValueEl = document.querySelector('.progress .value');
+const countNumber = document.querySelector('.num');
+const qBoxImg = document.getElementById('qImg');
 const endPoint = 12; //문제 갯수
 
 let qIdx = 0;
@@ -21,12 +23,22 @@ function goNext(qIdx) {
     return;
   }
   const q = document.querySelector(".qBox");
+  countNumber.innerHTML = qIdx + 1 +' / 12';
   q.innerHTML = qnaList[qIdx].q;
   for (let i in qnaList[qIdx].a) {
     addAnswer(qnaList[qIdx].a[i].answer, qnaList[qIdx].a[i].value);
   }
-  progressValueEl.style.width = (qIdx + 1) * 10 + '%'
+  progressValueEl.style.width = (qIdx + 1) * 8.33 + '%';
+
+  for(let n=0; n<endPoint; n++){
+    if(qIdx == n){
+      qBoxImg.src = "img/q_"+ (n+1) + ".png";
+    }
+  }
 }
+
+
+
 
 function addAnswer(answerText, value) {
   var a = document.querySelector(".answerBox");
@@ -53,22 +65,47 @@ function goResult() {
   qna.style.display = "none";
   result.style.display = "grid";
 
-  const resultName = document.querySelector(".resultName");
+  const resultType = document.getElementById("resultType");
+  const resultInfo = document.getElementById("resultInfo");
+  const resultImg = document.getElementById("resultImg");
+  const resultDesc = document.querySelector(".resultDesc");
+
   console.log(anserResult);
   let number = "";
   number = infoList.findIndex((x) => x.type === anserResult);
   console.log(number);
   console.log(infoList[number].name);
-  resultName.innerHTML = infoList[number].name;
-  // const resultImg = document.querySelector('.resultImg');
-  // resultImg.src = infoList[number].img;
-  const resultDesc = document.querySelector(".resultDesc");
+  resultType.innerHTML = infoList[number].type;
+  resultInfo.innerHTML = infoList[number].name;
+  resultImg.src = infoList[number].img;
   resultDesc.innerHTML = infoList[number].desc;
 
-  songs.forEach(function (song, index) {
+  const songImgs = document.querySelectorAll('.song-img');
+  const songTitles = document.querySelectorAll('.songTitle');
+  const artists = document.querySelectorAll('.artist');
+  const songLinks = document.querySelectorAll('.songLink');
 
+  songImgs.forEach(function (songimg, index){
+    songimg.src = infoList[number].songs[index].img;
+    //console.log(infoList[number].songs[index].img);
+  });
+  songTitles.forEach(function (songTitle, index){
+    songTitle.innerHTML = infoList[number].songs[index].songtitle;
+    //console.log(infoList[number].songs[index].songtitle);
+  });
+  artists.forEach(function(artistName, index){
+    artistName.innerHTML = infoList[number].songs[index].artist;
+  });
+  songLinks.forEach(function(songLink, index){
+    songLink.setAttribute('href', infoList[number].songs[index].link);
+    songLink.setAttribute('target', '_blank');
+    //console.log(songLink.getAttribute('href'));
+  });
+
+
+  /*songs.forEach(function (song, index) {
     song.innerHTML = infoList[number].songs[index]
-  })
+  })*/
 }
 
 function reGame() {

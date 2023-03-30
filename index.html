@@ -4,57 +4,134 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>나에게 맞는 플레이 리스트는?</title>
+    <title>나와 어울리는 K-POP 플레이 리스트는?</title>
+    <link rel="stylesheet" href="./reset.css">
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./font.css">
+    <link rel="icon" href="./favicon.ico">
+    <link rel="icon" href="./img/favicon.png">
+    <!-- js -->
     <script src = "./data.js" defer></script>
     <script src = "./start.js" defer></script>
+    <script src="https://kit.fontawesome.com/3f4ea489e8.js" crossorigin="anonymous"></script>
+    
 </head>
 <body>
-    <section id="main">
-        <h1>나에게 맞는 플레이리스트는?</h1>
-        <img src="./img/music.png" alt=""/>
-        <p>
-            내가 좋아하는 플레이 리스트를 찾아보자구요!
-        </p>
-        <button class="start" onclick="js:begin()">
-            누르면 시작!
-        </button>
-    </section>
-    <section id="qna">
-        <div class="progress">
-            <div class="value"></div>
-        </div>
-        <div class="qBox">
+    <div class="container">
+        <!-- main -->
+        <section id="main" data-aos="fade-down">
+            <div class="inner">
+                <h1>나와 어울리는 <br>K-POP 플레이리스트는?</h1>
+                <img src="./img/main.gif" alt="메인이미지"/>
+                <p>
+                    내 성격으로 알아보는 추천 음악 테스트!<br>
+                    내게 맞는 플레이리스트를 찾아보자!
+                </p>
+                <button class="start" onclick="js:begin()">
+                    누르면 시작!
+                </button>
+                <p class="useCount">
+                    <!-- 참여자수 -->
+                </p>
+                <p class="madeBy">
+                    만든이: ayyb, soySoSoy
+                </p>
+            </div>
+        </section>
+        <!-- 질문&답 -->
+        <section id="qna">
+            <div class="inner">
+                <!-- 진행상태 -->
+                <div class="progress-bar">
+                    <div class="txt-box">
+                        <p class="title">플레이리스트 MBTI</p>
+                        <p class="count"><span class="num">1</sp>/12</p>
+                    </div>
+                    <div class="progress">
+                        <div class="value"></div>
+                    </div>
+                </div>
+                <!-- 질문 -->
+                <div class="qBox">
+        
+                </div>
+                <img id="qImg" src="img/answer.png" alt="답변페이지 이미지">
+                <!-- 답 -->
+                <div class="answerBox">
+        
+                </div>
+            </div>
+        </section>
+        <!-- result -->
+        <section id="result">
+            <div class="inner">
+                <h2>당신의 MBTI 유형은?</h2>
+                <div class="resultName">
+                    <h2 id="resultType">
+                        ISTJ
+                    </h2>
+                    <h3 id="resultInfo">
+                        청렴결백한 논리주의자
+                    </h3>
+                </div>
+                <div class="resultImg">
+                    <img id="resultImg" src="img/istj.png" alt="mbti와 맞는 연예인 이미지">
+                </div>
+                <h3>내 성향은?</h3>
+                <div class="resultDesc">
+        
+                </div>
+                <h4>추천 플레이리스트</h4>
+                <div class="playList">
+                    <div class="song">
+                        <div class="songImg">
+                            <img class="song-img" src="img/song_example.png" alt="음반 이미지">
+                        </div>
+                        <div class="songDesc">
+                            <p class="songTitle">Hype Boy</p>
+                            <p class="artist">뉴진스(NewJeans)</p>
+                        </div>
+                        <div class="playIcon">
+                            <a class="songLink" href="#"><i class="fa-solid fa-circle-play"></i></a>
+                        </div>
+                    </div>
+                    <div class="song">
+                        <div class="songImg">
+                            <img class="song-img" src="img/song_example.png" alt="음반 이미지">
+                        </div>
+                        <div class="songDesc">
+                            <p class="songTitle">Dynamite</p>
+                            <p class="artist">BTS</p>
+                        </div>
+                        <div class="playIcon">
+                            <a class="songLink" href="#"><i class="fa-solid fa-circle-play"></i></a>
+                        </div>
+                    </div>
+                    <div class="song">
+                        <div class="songImg">
+                            <img class="song-img" src="img/song_example.png" alt="음반 이미지">
+                        </div>
+                        <div class="songDesc">
+                            <p class="songTitle">Love Dive</p>
+                            <p class="artist">아이브(Ive)</p>
+                        </div>
+                        <div class="playIcon">
+                            <a class="songLink" href="#"><i class="fa-solid fa-circle-play"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="resultBtn">
+                    <button onclick="js:reGame()">
+                        다시하기
+                    </button>
+                    <button class="share-or-copy">
+                        공유하기
+                    </button>
+                </div>
+            </div>
+        </section>
+    </div>
 
-        </div>
-        <div class="answerBox">
-
-        </div>
-    </section>
-    <section id="result">
-        <h2>해당하는 MBTI는?</h2>
-        <div class="resultName">
-
-        </div>
-        <div class="resultImg">
-
-        </div>
-        <h3>내 성향은?</h3>
-        <div class="resultDesc">
-
-        </div>
-        <h4>나와 같은사람들이 선호하는 플레이리스트!</h3>
-        <div class="playList">
-            <div class="song"></div>
-            <div class="song"></div>
-            <div class="song"></div>
-        </div>
-        <button onclick="js:reGame()">
-            다시하기
-        </button>
-        <button class="share-or-copy">
-            공유하기
-        </button>
-    </section>
+    
 </body>
 </html>

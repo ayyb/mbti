@@ -1,0 +1,415 @@
+$bg-color: #FCF2F1;
+$btn-color: #000;
+$font-color:#fff;
+$point-color: #FEA8A7;
+$result-bg:#ffc7c7;
+
+@mixin title-font{
+    font-family: 'Cafe24 Ssurround';
+}
+@mixin regular-font{
+    font-family: 'NanumSquareRoundOTF';
+}
+
+@mixin center{
+    display: grid;
+    place-items: center;
+    align-content: center;
+}
+@mixin btn-style{
+    //시작하기 다시하기 공유하기
+    font-family: 'Cafe24 Ssurround';
+    font-size: 1.25vw;
+    cursor:pointer;
+    padding: 1vw 5vw;
+    border-radius: 40px;
+    box-sizing: border-box;
+    background: $btn-color;
+    color:$font-color;
+    &:hover, &:focus, &:active{
+        background: $point-color;
+        color:$btn-color;
+        transition: all 0.1s ease;
+        box-shadow: 3px 3px 3px rgba(0,0,0,0.3);
+    }
+}
+@mixin answer-style{
+    font-family: 'NanumSquareRoundOTF';
+    font-size: 1.2vw;
+    cursor:pointer;
+    padding: 2vw 5vw;
+    box-sizing: border-box;
+    border-radius: 20px;
+    background: $btn-color;
+    color:$font-color;
+    &:hover, &:focus, &:active{
+        background: $point-color;
+        color:$btn-color;
+        transition: all 0.1s ease;
+        box-shadow: 3px 3px 3px rgba(0,0,0,0.3);
+    }
+}
+
+/*기본 layout*/
+body{
+    width: 100%;
+    font-family: 'NanumSquareRoundOTF';
+    background: #fff;
+    button{
+        border:none;
+        font-family: 'Cafe24 Ssurround';
+        font-weight: normal;
+    }
+}
+
+.container{
+    width:100%;
+    max-width: 1920px;
+    background: $bg-color;
+    margin:0 auto;
+    @include center;
+    section{
+        width:100%;
+        padding: 3vw;
+        box-sizing: border-box;
+        // background: tomato; 
+        //@include center;
+        min-height: 100vh;
+        .inner{
+            // background: blue;
+            margin:0 auto;
+            box-sizing: border-box;
+            // border:1px solid $point-color;
+            width: 92%;
+            @include center;
+        }
+    }
+}
+
+/*main*/
+#main{
+    h1{
+        @include title-font;
+        font-size: 2.5vw;
+        text-align: center;
+        margin-top: 2vw;
+        margin-bottom: 2.5vw;
+    }
+    img{
+        width:22%;
+        border-radius: 40px;
+        margin-bottom: 2.5vw;
+    }
+    p{
+        font-size: 1.25vw;
+        margin-bottom: 2.5vw;
+        text-align: center;
+        line-height: 1.5;
+    }
+    .start{
+        @include btn-style;
+    }
+    .madeBy{
+        font-size: 0.8vw;
+    }
+}
+
+
+/*qna*/
+#qna{
+    display:none;
+    .progress-bar{
+        position:relative;
+        padding:1vw;
+        box-sizing: border-box;
+        .txt-box{
+            margin-bottom: 2vw;
+            @include regular-font;
+            .title{
+                font-size: 0.9vw;
+                float:left;
+            }
+            .count{
+                font-size: 0.9vw;
+                float:right;
+            }
+        }
+        .progress{
+            border-radius: 20px;
+            position:relative;
+            background: #fff;
+            width:30vw;
+            height: 20px;
+            .value{
+                border-radius: 20px;
+                position:absolute;
+                background: $point-color;
+                width:0;
+                height:20px;
+                top:0;
+                left:0;
+                transition: all 0.7s ease;
+
+            }
+
+        }
+    }
+    .qBox{
+        @include title-font;
+        font-size: 2vw;
+        padding:1vw 2vw;
+        box-sizing: border-box;
+        margin-bottom: 2vw;
+    }
+    img{
+        width:23%;
+        margin-bottom: 2.75vw;
+    }
+    .answerBox{
+        display:flex;
+        flex-direction: column;
+        .answerList{
+            @include answer-style;
+            &:nth-child(2n-1){
+                margin-bottom: 1.5vw;
+            }
+        }
+    }
+}
+
+
+/*result*/
+#result{
+    display: none;
+    background: $result-bg;
+    .inner{
+        h2, .resultName, h3, h4{
+            @include title-font;
+        }
+        > h2{
+            font-size: 2vw;
+            margin-bottom: 2.5vw;
+        }
+        .resultName{
+            @include center;
+            #resultType{
+                font-size: 3vw;
+                margin-bottom: 0.5vw;
+            }
+            #resultInfo{
+                font-size: 1.5vw;
+                margin-bottom: 4vw;
+            }
+        }
+        .resultImg{
+            width:25%;
+            margin-bottom: 4vw;
+            #resultImg{
+                width:100%;
+                //max-width: 330px;
+            }
+        }
+        h3, h4{
+            font-size: 1.5vw;
+            margin-bottom: 4vw;
+        }
+        .resultDesc{
+            width: 50%;
+            line-height: 1.3;
+            font-size: 1.25vw;
+            margin-bottom: 5vw;
+        }
+        .playList{
+            margin-bottom: 1vw;
+            .song{
+                border-radius: 20px;
+                background: $bg-color;
+                display:flex;
+                justify-content: space-evenly;
+                padding: 1.2vw 2vw;
+                margin-bottom: 2vw;
+                box-sizing: border-box;
+                &:hover, &:active, &:focus{
+                    box-shadow: 3px 3px 3px rgba(0,0,0,0.3);
+                    cursor:pointer;
+                }
+                .songImg{
+                    width: 15%;
+                    //margin-right: 4vw;
+                    img{
+                        width:100%;
+                        border-radius: 20px;
+                    }
+                }
+                .songDesc{
+                    @include center;
+                    width:50%;
+                    box-sizing: border-box;
+                    margin: 0 5vw;
+                    .songTitle{
+                        @include title-font;
+                        font-size: 1.75vw;
+                        margin-bottom: 1vw;
+                    }
+                    .artist{
+                        font-size: 0.8vw;
+                    }
+                }
+                .playIcon{
+                    @include center;
+                    //margin-left:1vw;
+                    a{
+                        &:hover, &:active, &:focus{
+                            color:$point-color;
+                        }
+                        i{
+                            font-size:1.5vw;
+                        }
+                    }
+                }
+            }
+        }
+        .resultBtn{
+            display: flex;
+            justify-content: space-between;
+            button{
+                @include btn-style;
+                padding:1vw 3vw;
+                margin: 3vw 5vw;
+                &:hover, &:focus, &:active{
+                    background: $bg-color;
+                    color:$btn-color;
+                    transition: all 0.1s ease;
+                    box-shadow: 3px 3px 3px rgba(0,0,0,0.3);
+                }
+            }
+        }
+    }
+}
+
+
+/*responsive*/
+/*mobile*/
+@media screen and (max-width: 500px) {
+    #main{
+        h1{
+            padding-top:13vw;
+            font-size:7vw;
+            line-height: 1.3;
+            margin-bottom: 10vw;
+        }
+        img{
+            width:65%;
+            margin-bottom: 9vw;
+        }
+        p{
+            font-size: 3vw;
+            margin-bottom: 10vw;
+        }
+        .start{
+            @include btn-style;
+            font-size: 4vw;
+            padding: 2vw 8vw;   
+        }
+    }
+
+    #qna{
+        display:none;
+        .progress-bar{
+            margin-bottom: 5vw;
+            .txt-box{
+                margin-bottom: 4vw;
+                .title{
+                    font-size: 2vw;
+                }
+                .count{
+                    font-size: 2vw;
+                }
+            }
+            .progress{
+                width: 70vw;
+                max-width:400px;
+                height: 4vw;
+                .value{
+                    height: 4vw;
+                }
+    
+            }
+        }
+        .qBox{
+            font-size: 5.5vw;
+            line-height: 1.3;
+            padding:1vw 2vw;
+            box-sizing: border-box;
+            margin-bottom:10vw;
+        }
+        img{
+            width:60%;
+            margin-bottom: 10vw;
+        }
+        .answerBox{
+            .answerList{
+                font-size: 3vw;
+                line-height: 1.3;
+                padding: 5vw 10vw;
+                &:nth-child(2n-1){
+                    margin-bottom: 5vw;
+                }
+            }
+        }
+    }
+
+    /*result*/
+    #result{
+        padding-top:13vw;
+        .inner{
+            > h2{
+                font-size: 6vw;
+                margin-bottom: 10vw;
+            }
+            .resultName{
+                @include center;
+                #resultType{
+                    font-size: 9vw;
+                    margin-bottom: 1.5vw;
+                }
+                #resultInfo{
+                    font-size: 4vw;
+                    margin-bottom: 10vw;
+                }
+            }
+            .resultImg{
+                width:65%;
+                margin-bottom: 10vw;
+                #resultImg{
+                    width:100%;
+                    max-width: 330px;
+                }
+            }
+            h3, h4{
+                font-size: 3.5vw;
+                margin-bottom: 6vw;
+            }
+            .resultDesc{
+                width: 70%;
+                font-size: 3vw;
+                line-height: 1.3;
+                margin-bottom: 8vw;
+            }
+            .playList{
+                margin-bottom: 2.5vw;
+                .song{
+                    font-size: 3vw;
+                    margin-bottom: 1vw;
+                }
+            }
+            .resultBtn{
+                button{
+                    font-size: 3.25vw;
+                    padding: 2vw 6vw; 
+                    margin: 5vw;
+                }
+            }
+        }
+    }
+}

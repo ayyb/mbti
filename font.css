@@ -1,0 +1,19 @@
+/* @font-face {
+    font-family: 'godoMaum';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/godoMaum.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+} */
+
+@font-face{
+    font-family: 'Cafe24 Ssurround';
+    src:url(./font/Cafe24Ssurround.ttf) format('truetype'); 
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NanumSquareRoundOTF';
+    src: url(./font/NanumSquareRoundOTFR.otf);
+    font-style: normal;
+    font-weight: normal;
+}
