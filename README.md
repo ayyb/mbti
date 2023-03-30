@@ -35,7 +35,7 @@ start index.html < (windows)
 
 ## Duration
 
-2023.03.14 ~ 2023.03.31 (about 2 week)
+ 2023.03.14 ~ 2023.03.31 (about 2 week)
 
 
 ---
