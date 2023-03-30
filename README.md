@@ -1,7 +1,7 @@
-
-
-
-
+[DEMO PAGE](https://ayyb.github.io/mbti)
+---
+[Figma Link](https://www.figma.com/file/hCnpk7zQsKfV8a7GnQ26Vh/mbti_mobile_design_0324?node-id=0-1)
+---
 # 내 성격으로 알아보는 추천 음악 테스트!
 ---
 
@@ -9,8 +9,9 @@
 
 ## Description
 
-간단한 테스트를 통해 mbti에 맞는 플레이리스트를 추천받을수있는 MBTI테스트입니다
-전체 12항으로 이루어져있으며 간단한 테스트후 결과에서 각 MBTI에 맞는 플레이리스트를 추천받을수있습니다
+간단한 테스트를 통해 mbti에 맞는 플레이리스트를 추천받을수있는 MBTI테스트입니다.
+전체 12항으로 이루어져있으며 결과에서 각 MBTI에 맞는 플레이리스트를 추천받을수있습니다.
+추천된 플레이리스트 정보는 Spotify와 연결되어있습니다.
 
 ### How to use
 
@@ -19,7 +20,7 @@
 ```
 git clone https://github.com/ayyb/mbti.git
 cd mbti 
-open index.html
+open index.html (macOS)
 start index.html < (windows)
 ```
 
@@ -35,6 +36,5 @@ start index.html < (windows)
 * **soySoSoy** : JO SO YOUNG(Design&Publishing)
 
 ---
-[DEMO PAGE](https://ayyb.github.io/mbti)
----
-*1920x1080에 최적화 되어있습니다.
+
+*위 사이트는 크롬 1920 * 1080에 최적화 되어있습니다.
