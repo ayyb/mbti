@@ -14,6 +14,8 @@ const songTitles = document.querySelectorAll(".songTitle");
 const artists = document.querySelectorAll(".artist");
 const songLinks = document.querySelectorAll(".songLink");
 const endPoint = 12; //문제 갯수
+const clientId = 'bd9ffb61b98e43339b8f2ea830f0ad8d';
+const clientSecret = 'ef6cf33eac6b4b8092a3412d0d8a36f5';
 
 let qIdx = 0;
 let anserResult = "";
@@ -52,9 +54,8 @@ function addAnswer(answerText, value) {
   a.append(answer);
   answer.innerHTML = answerText;
 
-  answer.addEventListener(
-    "click",
-    function () {
+  answer.addEventListener("click",
+    function () {    
       anserResult += value;
       console.log(result);
       var children = document.querySelectorAll(".answerList");
@@ -68,15 +69,15 @@ function addAnswer(answerText, value) {
   );
 }
 
-const access_token = "";
+/*MBTI별 추천 플레이리스트를 가져오는 함수(Spotify API)*/
 let playlist_id = ""; //플레이리스트 아이디
 let playList = [];
 
 async function fetchPlaylist() {
   try {
     const accessToken = await requestAccessToken(
-      "bd9ffb61b98e43339b8f2ea830f0ad8d",
-      "ef6cf33eac6b4b8092a3412d0d8a36f5"
+      clientId,
+      clientSecret
     );
     const response = await fetch(
       `https://api.spotify.com/v1/playlists/${playlist_id}`,
@@ -97,12 +98,24 @@ async function fetchPlaylist() {
   }
 }
 
-async function goResult() {
-  
+function countOccurrences(str, char) {
+  let count = 0;
+  for (let i = 0; i < str.length; i++) {
+    if (str[i] === char) {
+      count++;
+    }
+  }
+  return count;
+}
 
-  console.log(anserResult);
+async function goResult() {
+  let mbti = ""; //최종결과 MBTI
+  countOccurrences(anserResult, "E") > 1 ? (mbti += "E") : (mbti += "I");
+  countOccurrences(anserResult, "N") > 1 ? (mbti += "N") : (mbti += "S");
+  countOccurrences(anserResult, "F") > 1 ? (mbti += "F") : (mbti += "T");
+  countOccurrences(anserResult, "P") > 1 ? (mbti += "P") : (mbti += "J");
   let number;
-  number = infoList.findIndex((x) => x.type === anserResult);
+  number = infoList.findIndex((x) => x.type === mbti);
 
   resultType.innerHTML = infoList[number].type;
   resultInfo.innerHTML = infoList[number].name;
@@ -122,22 +135,6 @@ async function goResult() {
   }
   const playList = await fetchPlaylist(); //결과값 조회
 
-  // if (playList) {
-  //   songImgs.forEach(function (songimg, index) {
-  //     //이미지
-  //     songimg.src = playList[index].track.album.images[0].url;
-  //   });
-  //   songTitles.forEach(function (songTitle, index) {
-  //     songTitle.innerHTML = playList[index].track.name;
-  //   });
-  //   artists.forEach(function (artistName, index) {
-  //     artistName.innerHTML = playList[index].track.album.artists[0].name;
-  //   });
-  //   songLinks.forEach(function (songLink, index) {
-  //     songLink.setAttribute("href", infoList[number].songs[index].link);
-  //     songLink.setAttribute("target", "_blank");
-  //   });
-  // }
   if (playList !== null) {
     qna.style.display = "none";
     result.style.display = "grid";
@@ -145,6 +142,7 @@ async function goResult() {
       songImgs[index].src = item.track.album.images[0].url;
       songTitles[index].innerHTML = item.track.name;
       artists[index].innerHTML = item.track.album.artists[0].name;
+      songLinks[index].setAttribute("data", item.track.preview_url);
       // songLinks[index].setAttribute("href", infoList[number].songs[index].link);
       // songLinks[index].setAttribute("target", "_blank");
     }
@@ -156,6 +154,9 @@ function reGame() {
   qIdx = 0;
   result.style.display = "none";
   main.style.display = "grid";
+  //음악중지
+  currentAudio.pause();
+  currentAudio = null;
 }
 
 // 공유 관련 소스
@@ -226,7 +227,8 @@ btnEl?.addEventListener("click", async function () {
   }
 });
 
-//요청 보내서 값 가져오기 - spotify api
+
+//spotify access_token요청 함수 - spotify api Devleoper 계정 사용중
 function requestAccessToken(clientId, clientSecret) {
   const url = "https://accounts.spotify.com/api/token";
   const options = {
@@ -248,4 +250,52 @@ function requestAccessToken(clientId, clientSecret) {
     .catch((error) => {
       console.error(error);
     });
+}
+
+//음악 관련 기능
+let currentAudio = null;
+
+function playMusic(index){
+  var preview_url = document.querySelectorAll( '.songLink' )[index].getAttribute( 'data' );
+  if (currentAudio !== null) {
+    currentAudio.pause();
+    currentAudio = null;
+  }
+  currentAudio = new Audio(preview_url);
+  currentAudio.play();
+}
+
+function countVisit() {
+  const cookieName = "visitCount";
+  let visitCount = parseInt(getCookie(cookieName)); // 현재 방문 횟수를 가져옵니다.
+  if (isNaN(visitCount)) {
+    visitCount = 0;
+  }
+  visitCount++; // 방문 횟수를 증가시킵니다.
+  setCookie(cookieName, visitCount, 365); // 방문 횟수를 쿠키에 저장합니다.
+  console.log("방문 횟수: " + visitCount); // 방문 횟수를 콘솔에 출력합니다.
+  document.getElementById('visitCount').innerHTML = visitCount;
+}
+
+function setCookie(cookieName, cookieValue, expireDays) {
+  const d = new Date();
+  d.setTime(d.getTime() + expireDays * 24 * 60 * 60 * 1000);
+  const expires = "expires=" + d.toUTCString();
+  document.cookie = cookieName + "=" + cookieValue + ";" + expires + ";path=/";
+}
+
+function getCookie(cookieName) {
+  const name = cookieName + "=";
+  const decodedCookie = decodeURIComponent(document.cookie);
+  const cookieArray = decodedCookie.split(";");
+  for (let i = 0; i < cookieArray.length; i++) {
+    let cookie = cookieArray[i];
+    while (cookie.charAt(0) === " ") {
+      cookie = cookie.substring(1);
+    }
+    if (cookie.indexOf(name) === 0) {
+      return cookie.substring(name.length, cookie.length);
+    }
+  }
+  return "";
 }

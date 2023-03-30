@@ -18,7 +18,7 @@
 
 </head>
 
-<body>
+<body onload="countVisit()">
     <div class="container">
         <!-- main -->
         <section id="main" data-aos="fade-down">
@@ -37,6 +37,9 @@
                 </p>
                 <p class="madeBy">
                     만든이: ayyb, soySoSoy
+                </p>
+                <p class="madeBy">
+                    현재까지 방문횟수는 <span id="visitCount"></span>번 입니다.
                 </p>
             </div>
         </section>
@@ -76,6 +79,7 @@
                         청렴결백한 논리주의자
                     </h3>
                 </div>
+                <h3>대표적인 아이돌은?</h3>
                 <div class="resultImg">
                     <img id="resultImg" src="img/istj.png" alt="mbti와 맞는 연예인 이미지">
                 </div>
@@ -94,7 +98,9 @@
                             <p class="artist">뉴진스(NewJeans)</p>
                         </div>
                         <div class="playIcon">
-                            <a class="songLink" href="#"><i class="fa-solid fa-circle-play"></i></a>
+                            <!-- <a class="songLink" href="#"><i class="fa-solid fa-circle-play"> -->
+                            <button type="button" class="songLink" onclick="js:playMusic(0)">30초 미리듣기<i class="fa-solid fa-circle-play">
+                            </i></button>
                         </div>
                     </div>
                     <div class="song">
@@ -106,7 +112,8 @@
                             <p class="artist">BTS</p>
                         </div>
                         <div class="playIcon">
-                            <a class="songLink" href="#"><i class="fa-solid fa-circle-play"></i></a>
+                            <!-- <a class="songLink" href="#"><i class="fa-solid fa-circle-play"></i></a> -->
+                            <button type="button" class="songLink" onclick="js:playMusic(1)">30초 미리듣기<i class="fa-solid fa-circle-play"></i>
                         </div>
                     </div>
                     <div class="song">
@@ -118,7 +125,8 @@
                             <p class="artist">아이브(Ive)</p>
                         </div>
                         <div class="playIcon">
-                            <a class="songLink" href="#"><i class="fa-solid fa-circle-play"></i></a>
+                            <!-- <a class="songLink" href="#"><i class="fa-solid fa-circle-play"></i></a> -->
+                            <button type="button" class="songLink" onclick="js:playMusic(2)">30초 미리듣기<i class="fa-solid fa-circle-play"></i>
                         </div>
                     </div>
                 </div>
@@ -133,8 +141,6 @@
             </div>
         </section>
     </div>
-
-
 </body>
 
 </html>

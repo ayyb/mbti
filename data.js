@@ -2,15 +2,15 @@ const qnaList = [
   {
     q: "1. 랜덤 플레이리스트를 듣다가 좋은 음악을 발견했을 때 나는",
     a: [
-      { answer: "a. 단톡방에 공유해서 주변 사람들에게 널리 알림", value: "I" },
-      { answer: "b. 조용히 프로필 뮤직을 해 놓거나 나만 듣는다", value: "E" },
+      { answer: "a. 단톡방에 공유해서 주변 사람들에게 널리 알림", value: "E"  },
+      { answer: "b. 조용히 프로필 뮤직을 해 놓거나 나만 듣는다", value: "I"},
     ],
   },
   {
     q: "2. 댄스 음악을 들으면서 나는",
     a: [
-      { answer: 'a. 무대 위 메인 댄서가 된 나를 상상', value: "S" },
-      { answer: 'b. 흥얼흥얼 거리며 음악을 즐긴다', value: "N" },
+      { answer: 'a. 무대 위 메인 댄서가 된 나를 상상', value: "N" },
+      { answer: 'b. 흥얼흥얼 거리며 음악을 즐긴다', value: "S" },
     ],
   },
   {
@@ -38,9 +38,9 @@ const qnaList = [
     a: [
       {
         answer: "a. 듣자마자 꽂히는 멜로디와 공감할 수 있는 가사",
-        value: "",
+        value: "E",
       },
-      { answer: "b. 그 음악에서만 느껴지는 분위기와 독특한 사운드", value: "" },
+      { answer: "b. 그 음악에서만 느껴지는 분위기와 독특한 사운드", value: "I" },
     ],
   },
   {
@@ -48,9 +48,9 @@ const qnaList = [
     a: [
       {
         answer: "a. 때에 따라 듣는 플레이리스트를 자주 정리한다",
-        value: "",
+        value: "S",
       },
-      { answer: "b. 이거 다음엔 뭐듣지.. 그냥 생각나는 거 듣는다", value: "" },
+      { answer: "b. 이거 다음엔 뭐듣지.. 그냥 생각나는 거 듣는다", value: "N" },
     ],
   },
   {
@@ -58,9 +58,9 @@ const qnaList = [
     a: [
       {
         answer: "a. 그게 뭐가 문제?",
-        value: "",
+        value: "T",
       },
-      { answer: "b. 크흑…분하다..", value: "" },
+      { answer: "b. 크흑…분하다..", value: "F" },
     ],
   },
   {
@@ -68,9 +68,9 @@ const qnaList = [
     a: [
       {
         answer: "a. 관련 ost나 소설에 어울리는 음악을 찾아 들으며 과몰입 중증에 걸려 헤어나오지 못함",
-        value: "",
+        value: "P",
       },
-      { answer: "b. 재밌었다 이제 할 일을 하자", value: "" },
+      { answer: "b. 재밌었다 이제 할 일을 하자", value: "J" },
     ],
   },
   {
@@ -78,9 +78,9 @@ const qnaList = [
     a: [
       {
         answer: "a. 들으면서 운다",
-        value: "",
+        value: "I",
       },
-      { answer: "b. 오히려 더 멀리한다", value: "" },
+      { answer: "b. 오히려 더 멀리한다", value: "E" },
     ],
   },
   {
@@ -88,9 +88,9 @@ const qnaList = [
     a: [
       {
         answer: "a. 혼자 이어폰을 끼고 창밖을 바라보는 게 좋다.",
-        value: "",
+        value: "S",
       },
-      { answer: "b. 인기차트 뮤비를 틀어놓고 노래를 다같이 듣는게 좋다", value: "" },
+      { answer: "b. 인기차트 뮤비를 틀어놓고 노래를 다같이 듣는게 좋다", value: "N" },
     ],
   },
   {
@@ -98,9 +98,9 @@ const qnaList = [
     a: [
       {
         answer: "a. 나도 이 노래 좋아핵!!!!!!!!!! 나가서 노래를 크게 따라부르며 나도 모르게 숙지한 안무를 뽐낸다.",
-        value: "",
+        value: "F",
       },
-      { answer: "b. 나도 아는 노래라고 속으로 생각하며 앉아서 박수치고 호응한다.", value: "" },
+      { answer: "b. 나도 아는 노래라고 속으로 생각하며 앉아서 박수치고 호응한다.", value: "T" },
     ],
   },
   {
@@ -108,9 +108,9 @@ const qnaList = [
     a: [
       {
         answer: "a. 너 무슨일 있는거 아니지?라며 안부를 묻는다",
-        value: "",
+        value: "P",
       },
-      { answer: "b. 어두운 노래가 취향인가..하고 넘긴다", value: "" },
+      { answer: "b. 어두운 노래가 취향인가..하고 넘긴다", value: "J" },
     ],
   },
 ];
