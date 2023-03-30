@@ -1,8 +1,6 @@
-[DEMO PAGE](https://ayyb.github.io/mbti)
+*[DEMO Page](https://ayyb.github.io/mbti)* / *[Figma Link](https://www.figma.com/file/hCnpk7zQsKfV8a7GnQ26Vh/mbti_mobile_design_0324?node-id=0-1)*
 ---
-[Figma Link](https://www.figma.com/file/hCnpk7zQsKfV8a7GnQ26Vh/mbti_mobile_design_0324?node-id=0-1)
----
-# 내 성격으로 알아보는 추천 음악 테스트!
+# MBTI로 알아보는 추천 플레이리스트 테스트!
 ---
 
 테스트로 알아보는 나만의 플레이리스트 추천 MBTI!
@@ -32,9 +30,12 @@ start index.html < (windows)
 
 ## Contributor
 
-* **ayyb** : LEE MYEONG SEOP(FE Developer)
-* **soySoSoy** : JO SO YOUNG(Design&Publishing)
+* **ayyb** : [LEE MYEONG SEOP(FE Developer)](http://github.com/ayyb)
+* **soySoSoy** : [JO SO YOUNG(Design&Publishing)](http://github./com/soySoSoy)
 
+## Duration
+
+2023.03.14 ~ 2023.03.31 (about 2 week)
 ---
 
 *위 사이트는 크롬 1920 * 1080에 최적화 되어있습니다.
