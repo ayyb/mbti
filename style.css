@@ -156,8 +156,8 @@ body button {
   font-family: "Cafe24 Ssurround";
 }
 #result .inner > h2 {
-  font-size: 2vw;
-  margin-bottom: 2.5vw;
+  font-size: 1.75vw;
+  margin-bottom: 4vw;
 }
 #result .inner .resultName {
   display: grid;
@@ -165,12 +165,16 @@ body button {
   align-content: center;
 }
 #result .inner .resultName #resultType {
-  font-size: 3vw;
+  font-size: 5vw;
   margin-bottom: 0.5vw;
 }
 #result .inner .resultName #resultInfo {
-  font-size: 1.5vw;
+  font-size: 1.25vw;
   margin-bottom: 4vw;
+}
+#result .inner .imgTitle {
+  font-size: 1.5vw;
+  margin-bottom: 2.5vw;
 }
 #result .inner .resultImg {
   width: 25%;
@@ -181,22 +185,24 @@ body button {
 }
 #result .inner h3, #result .inner h4 {
   font-size: 1.5vw;
-  margin-bottom: 4vw;
+  margin-bottom: 2.5vw;
 }
 #result .inner .resultDesc {
   width: 50%;
   line-height: 1.3;
   font-size: 1.25vw;
+  text-align: center;
   margin-bottom: 5vw;
 }
 #result .inner .playList {
   margin-bottom: 1vw;
+  width: 50%;
 }
 #result .inner .playList .song {
   border-radius: 20px;
   background: #FCF2F1;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   padding: 1.2vw 2vw;
   margin-bottom: 2vw;
   box-sizing: border-box;
@@ -233,11 +239,14 @@ body button {
   place-items: center;
   align-content: center;
 }
-#result .inner .playList .song .playIcon a:hover, #result .inner .playList .song .playIcon a:active, #result .inner .playList .song .playIcon a:focus {
+#result .inner .playList .song .playIcon button {
+  cursor: pointer;
+}
+#result .inner .playList .song .playIcon button:hover, #result .inner .playList .song .playIcon button:active, #result .inner .playList .song .playIcon button:focus {
   color: #FEA8A7;
 }
-#result .inner .playList .song .playIcon a i {
-  font-size: 1.5vw;
+#result .inner .playList .song .playIcon button i {
+  font-size: 2vw;
 }
 #result .inner .resultBtn {
   display: flex;
