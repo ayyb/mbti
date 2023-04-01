@@ -255,6 +255,7 @@ function requestAccessToken(clientId, clientSecret) {
 //음악 관련 기능
 let currentAudio = null;
 
+
 function playMusic(index){
   var preview_url = document.querySelectorAll( '.songLink' )[index].getAttribute( 'data' );
   if (currentAudio !== null) {
@@ -264,6 +265,16 @@ function playMusic(index){
   currentAudio = new Audio(preview_url);
   currentAudio.play();
 }
+
+//play<->pause button change
+const playBtn = document.querySelectorAll('i');
+songLinks.forEach(function(data, index){
+    data.addEventListener('click',function(){
+      playBtn[index].classList.toggle("fa-circle-play");
+      playBtn[index].classList.toggle("fa-circle-pause");
+    });
+});
+
 
 function countVisit() {
   const cookieName = "visitCount";
