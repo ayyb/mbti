@@ -108,9 +108,11 @@ body{
     }
     .start{
         @include btn-style;
+        margin-bottom: 4vw;
     }
-    .madeBy{
-        font-size: 0.8vw;
+    p.madeBy{
+        font-size: 1vw;
+        margin-bottom: 1vw;
     }
 }
 
@@ -377,44 +379,72 @@ body{
             .resultName{
                 @include center;
                 #resultType{
-                    font-size: 9vw;
+                    font-size: 12vw;
                     margin-bottom: 1.5vw;
                 }
                 #resultInfo{
-                    font-size: 4vw;
-                    margin-bottom: 10vw;
+                    font-size: 4.5vw;
+                    margin-bottom: 13vw;
                 }
+            }
+            .imgTitle{
+                font-size: 5vw;
+                margin-bottom: 4vw;
             }
             .resultImg{
                 width:65%;
-                margin-bottom: 10vw;
+                margin-bottom: 15vw;
                 #resultImg{
                     width:100%;
                     max-width: 330px;
                 }
             }
             h3, h4{
-                font-size: 3.5vw;
-                margin-bottom: 6vw;
+                font-size: 5vw;
+                margin-bottom: 7vw;
             }
             .resultDesc{
-                width: 70%;
-                font-size: 3vw;
-                line-height: 1.3;
-                margin-bottom: 8vw;
+                width: 90%;
+                font-size: 3.5vw;
+                line-height: 1.4;
+                margin-bottom: 15vw;
             }
             .playList{
+                width:90%;
                 margin-bottom: 2.5vw;
                 .song{
-                    font-size: 3vw;
-                    margin-bottom: 1vw;
+                    
+                    margin-bottom: 3vw;
+                    .songImg{
+                        width: 20%;
+                        img{
+                            width:100%;
+                            border-radius: 15px;
+                        }
+                    }
+                    .songDesc{
+                        width:70%;
+                        .songTitle{
+                            font-size: 3vw;
+                        }
+                        .artist{
+                            font-size: 1.25vw;
+                        }
+                    }
+                    .playIcon{
+                        button{
+                            i{
+                                font-size: 5vw;
+                            }
+                        }
+                    }
                 }
             }
             .resultBtn{
                 button{
-                    font-size: 3.25vw;
-                    padding: 2vw 6vw; 
-                    margin: 5vw;
+                    font-size: 4vw;
+                    padding: 2vw 5vw; 
+                    margin: 9vw;
                 }
             }
         }
