@@ -283,6 +283,8 @@ songLinks.forEach(function(data, index){
       }
       else if(clickBtn.classList.contains("fa-circle-pause")){
         playBtn[index].classList.replace("fa-circle-pause", "fa-circle-play");
+        currentAudio.pause();
+        currentAudio = null;
       } 
       
     });
