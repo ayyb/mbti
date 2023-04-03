@@ -293,7 +293,7 @@ body button {
     margin-bottom: 9vw;
   }
   #main p {
-    font-size: 3vw;
+    font-size: 3.75vw;
     margin-bottom: 10vw;
   }
   #main .start {
@@ -307,12 +307,16 @@ body button {
     color: #fff;
     font-size: 4vw;
     padding: 2vw 8vw;
+    margin-bottom: 10vw;
   }
   #main .start:hover, #main .start:focus, #main .start:active {
     background: #FEA8A7;
     color: #000;
     transition: all 0.1s ease;
     box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+  }
+  #main .madeBy {
+    font-size: 1.75vw;
   }
   #qna {
     display: none;
@@ -400,27 +404,29 @@ body button {
     margin-bottom: 15vw;
   }
   #result .inner .playList {
-    width: 90%;
+    width: 100%;
     margin-bottom: 2.5vw;
   }
   #result .inner .playList .song {
-    margin-bottom: 3vw;
+    padding: 1vw 3vw;
+    box-sizing: border-box;
+    margin-bottom: 4vw;
   }
   #result .inner .playList .song .songImg {
-    width: 20%;
+    width: 25%;
   }
   #result .inner .playList .song .songImg img {
     width: 100%;
     border-radius: 15px;
   }
   #result .inner .playList .song .songDesc {
-    width: 70%;
+    width: 80%;
   }
   #result .inner .playList .song .songDesc .songTitle {
-    font-size: 3vw;
+    font-size: 4vw;
   }
   #result .inner .playList .song .songDesc .artist {
-    font-size: 1.25vw;
+    font-size: 1.75vw;
   }
   #result .inner .playList .song .playIcon button i {
     font-size: 5vw;

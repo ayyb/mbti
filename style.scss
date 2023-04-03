@@ -312,13 +312,17 @@ body{
             margin-bottom: 9vw;
         }
         p{
-            font-size: 3vw;
+            font-size: 3.75vw;
             margin-bottom: 10vw;
         }
         .start{
             @include btn-style;
             font-size: 4vw;
-            padding: 2vw 8vw;   
+            padding: 2vw 8vw; 
+            margin-bottom: 10vw;
+        }
+        .madeBy{
+            font-size: 1.75vw;
         }
     }
 
@@ -410,25 +414,26 @@ body{
                 margin-bottom: 15vw;
             }
             .playList{
-                width:90%;
+                width:100%;
                 margin-bottom: 2.5vw;
                 .song{
-                    
-                    margin-bottom: 3vw;
+                    padding: 1vw 3vw;
+                    box-sizing: border-box;
+                    margin-bottom: 4vw;
                     .songImg{
-                        width: 20%;
+                        width: 25%;
                         img{
                             width:100%;
                             border-radius: 15px;
                         }
                     }
                     .songDesc{
-                        width:70%;
+                        width:80%;
                         .songTitle{
-                            font-size: 3vw;
+                            font-size: 4vw;
                         }
                         .artist{
-                            font-size: 1.25vw;
+                            font-size: 1.75vw;
                         }
                     }
                     .playIcon{
