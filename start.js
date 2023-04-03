@@ -269,9 +269,22 @@ function playMusic(index){
 //play<->pause button change
 const playBtn = document.querySelectorAll('i');
 songLinks.forEach(function(data, index){
-    data.addEventListener('click',function(){
-      playBtn[index].classList.toggle("fa-circle-play");
-      playBtn[index].classList.toggle("fa-circle-pause");
+    data.addEventListener('click',function(e){
+      console.log(e.target);
+      const clickBtn = e.target;
+      for(let m=0;m<songLinks.length;m++){
+        if(playBtn[m] != clickBtn){
+          playBtn[m].classList.remove("fa-circle-pause");
+          playBtn[m].classList.add("fa-circle-play");
+        }
+      }
+      if(clickBtn.classList.contains("fa-circle-play")){
+        playBtn[index].classList.replace("fa-circle-play", "fa-circle-pause");
+      }
+      else if(clickBtn.classList.contains("fa-circle-pause")){
+        playBtn[index].classList.replace("fa-circle-pause", "fa-circle-play");
+      } 
+      
     });
 });
 
